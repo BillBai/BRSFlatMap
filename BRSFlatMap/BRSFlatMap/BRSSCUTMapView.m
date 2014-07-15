@@ -58,8 +58,20 @@
     //longPressGestureRecognizer.minimumPressDuration = 0.7; //user needs to press for 2 seconds
     [self addGestureRecognizer:longPressGestureRecognizer];
     
-    UITapGestureRecognizer *tapGuestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    [self addGestureRecognizer:tapGuestureRecognizer];
+    /*
+     add this double tap gesture to prevent the double-tap-map-zoom gesture to be recognized as single tap.
+     this is just a hack.
+     */
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc]
+                      initWithTarget:self action:@selector(handleDoubleTap:)];
+    doubleTap.numberOfTapsRequired = 2;
+    doubleTap.numberOfTouchesRequired = 1;
+    [self addGestureRecognizer:doubleTap];
+    
+    UITapGestureRecognizer *singleTapGuestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    singleTapGuestureRecognizer.numberOfTapsRequired = 1;
+    [singleTapGuestureRecognizer requireGestureRecognizerToFail:doubleTap];
+    [self addGestureRecognizer:singleTapGuestureRecognizer];
 }
 
 - (void)handleLongPress:(UIGestureRecognizer *)sender
@@ -78,17 +90,20 @@
     }
 }
 
-
-- (void)handleTap:(UITapGestureRecognizer *)sender
+- (void)handleSingleTap:(UITapGestureRecognizer *)sender
 {
     if (sender.state == UIGestureRecognizerStateEnded)
     {
         CGPoint touchPoint = [sender locationInView:self];
         CLLocationCoordinate2D touchMapCoordinate = [self convertPoint:touchPoint toCoordinateFromView:self];
         if ([self.gestureDelegate conformsToProtocol:@protocol(BRSMapViewDelegate)]) {
-            [self.gestureDelegate mapView:self didTapOnPoint:touchMapCoordinate];
+            [self.gestureDelegate mapView:self didSingleTapOnPoint:touchMapCoordinate];
         }
     }
 }
+
+// Do nothing while double tap, let the mapview to handle double tap zooming.
+- (void)handleDoubleTap:(UITapGestureRecognizer *)sender
+{}
 
 @end

@@ -33,7 +33,7 @@
     NSLog(@"longpress");
 }
 
-- (void)mapView:(BRSSCUTMapView *)mapView didTapOnPoint:(CLLocationCoordinate2D)coord
+- (void)mapView:(BRSSCUTMapView *)mapView didSingleTapOnPoint:(CLLocationCoordinate2D)coord
 {
     NSLog(@"tap");
 }
