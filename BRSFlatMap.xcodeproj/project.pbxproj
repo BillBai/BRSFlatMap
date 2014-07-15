@@ -22,6 +22,9 @@
 		A983184E1973752700CF1A4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318321973752700CF1A4A /* CoreData.framework */; };
 		A98318561973752800CF1A4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98318541973752700CF1A4A /* InfoPlist.strings */; };
 		A98318581973752800CF1A4A /* BRSFlatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A98318571973752800CF1A4A /* BRSFlatMapTests.m */; };
+		A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */; };
+		A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */; };
+		A9D093261974ED1D0000BAF7 /* BRSMapMetaDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		A98318531973752700CF1A4A /* BRSFlatMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BRSFlatMapTests-Info.plist"; sourceTree = "<group>"; };
 		A98318551973752700CF1A4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A98318571973752800CF1A4A /* BRSFlatMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRSFlatMapTests.m; sourceTree = "<group>"; };
+		A9D0931E1974DEB40000BAF7 /* BRSFlatMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSFlatMapViewController.h; path = BRSFlatMap/BRSFlatMapViewController.h; sourceTree = "<group>"; };
+		A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSFlatMapViewController.m; path = BRSFlatMap/BRSFlatMapViewController.m; sourceTree = "<group>"; };
+		A9D093211974E0D50000BAF7 /* BRSSCUTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSSCUTMapView.h; path = BRSFlatMap/BRSSCUTMapView.h; sourceTree = "<group>"; };
+		A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSSCUTMapView.m; path = BRSFlatMap/BRSSCUTMapView.m; sourceTree = "<group>"; };
+		A9D093241974ED1D0000BAF7 /* BRSMapMetaDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapMetaDataManager.h; path = BRSFlatMap/BRSMapMetaDataManager.h; sourceTree = "<group>"; };
+		A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapMetaDataManager.m; path = BRSFlatMap/BRSMapMetaDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,12 @@
 			children = (
 				A983183D1973752700CF1A4A /* BRSAppDelegate.h */,
 				A983183E1973752700CF1A4A /* BRSAppDelegate.m */,
+				A9D0931E1974DEB40000BAF7 /* BRSFlatMapViewController.h */,
+				A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */,
+				A9D093241974ED1D0000BAF7 /* BRSMapMetaDataManager.h */,
+				A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */,
+				A9D093211974E0D50000BAF7 /* BRSSCUTMapView.h */,
+				A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */,
 				A98318431973752700CF1A4A /* Images.xcassets */,
 				A98318401973752700CF1A4A /* BRSFlatMap.xcdatamodeld */,
 				A98318351973752700CF1A4A /* Supporting Files */,
@@ -249,9 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */,
+				A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */,
 				A983183F1973752700CF1A4A /* BRSAppDelegate.m in Sources */,
 				A983183B1973752700CF1A4A /* main.m in Sources */,
 				A98318421973752700CF1A4A /* BRSFlatMap.xcdatamodeld in Sources */,
+				A9D093261974ED1D0000BAF7 /* BRSMapMetaDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +466,7 @@
 				A983185D1973752800CF1A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A983185E1973752800CF1A4A /* Build configuration list for PBXNativeTarget "BRSFlatMapTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +475,7 @@
 				A98318601973752800CF1A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

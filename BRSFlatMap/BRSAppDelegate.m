@@ -7,6 +7,7 @@
 //
 
 #import "BRSAppDelegate.h"
+#import "BRSFlatMapViewController.h"
 
 @implementation BRSAppDelegate
 
@@ -19,6 +20,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    BRSFlatMapViewController *mapViewControlelr = [[BRSFlatMapViewController alloc] init];
+    self.window.rootViewController = mapViewControlelr;
     [self.window makeKeyAndVisible];
     return YES;
 }
