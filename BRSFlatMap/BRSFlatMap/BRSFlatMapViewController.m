@@ -7,6 +7,7 @@
 //
 
 #import "BRSFlatMapViewController.h"
+#import "BRSAnnotation.h"
 
 @implementation BRSFlatMapViewController
 
@@ -20,6 +21,22 @@
 
 #pragma mark - MKMapViewDelegate
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+	MKPinAnnotationView *annotationView = nil;
+	if ([annotation isKindOfClass:[BRSAnnotation class]])
+	{
+		annotationView = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
+		if (annotationView == nil)
+		{
+			annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
+			annotationView.canShowCallout = YES;
+			annotationView.animatesDrop = YES;
+		}
+	}
+	return annotationView;
+}
+
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {}
 
@@ -28,14 +45,26 @@
 
 #pragma mark - BRSMapViewDelegate
 
-- (void)mapView:(BRSSCUTMapView *)mapView didLongpressOnPoint:(CLLocationCoordinate2D)coord
+- (void)mapView:(BRSSCUTMapView *)mapView didLongPressOnPoint:(CLLocationCoordinate2D)coord
 {
-    NSLog(@"longpress");
+    NSLog(@"did long press");
+}
+
+- (void)mapView:(BRSSCUTMapView *)mapView LongPressingOnPoint:(CLLocationCoordinate2D)coord
+{
+    NSLog(@"long pressing");
+    
+    BRSAnnotation *annotation = [[BRSAnnotation alloc] init];
+    annotation.coordinate = coord;
+    annotation.title = @"hello";
+    annotation.subtitle = @"map";
+    [self.mapView addAnnotation:annotation];
+    
 }
 
 - (void)mapView:(BRSSCUTMapView *)mapView didSingleTapOnPoint:(CLLocationCoordinate2D)coord
 {
-    NSLog(@"tap");
+    NSLog(@"did single tap");
 }
 
 @end

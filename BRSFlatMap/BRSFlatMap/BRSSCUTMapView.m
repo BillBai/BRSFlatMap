@@ -55,7 +55,6 @@
 {
     UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc]
                                           initWithTarget:self action:@selector(handleLongPress:)];
-    //longPressGestureRecognizer.minimumPressDuration = 0.7; //user needs to press for 2 seconds
     [self addGestureRecognizer:longPressGestureRecognizer];
     
     /*
@@ -76,27 +75,25 @@
 
 - (void)handleLongPress:(UIGestureRecognizer *)sender
 {
-    if (sender.state == UIGestureRecognizerStateEnded)
-    {
-        
-    }
-    else
-    {
-        CGPoint touchPoint = [sender locationInView:self];
-        CLLocationCoordinate2D touchMapCoordinate = [self convertPoint:touchPoint toCoordinateFromView:self];
-        if ([self.gestureDelegate conformsToProtocol:@protocol(BRSMapViewDelegate)]) {
-            [self.gestureDelegate mapView:self didLongpressOnPoint:touchMapCoordinate];
+    CGPoint touchPoint = [sender locationInView:self];
+    CLLocationCoordinate2D touchMapCoordinate = [self convertPoint:touchPoint toCoordinateFromView:self];
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        if ([self.gestureDelegate respondsToSelector:@selector(mapView:didLongPressOnPoint:)]) {
+            [self.gestureDelegate mapView:self didLongPressOnPoint:touchMapCoordinate];
+        }
+    } else {
+        if ([self.gestureDelegate respondsToSelector:@selector(mapView:LongPressingOnPoint:)]) {
+            [self.gestureDelegate mapView:self LongPressingOnPoint:touchMapCoordinate];
         }
     }
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)sender
 {
-    if (sender.state == UIGestureRecognizerStateEnded)
-    {
+    if (sender.state == UIGestureRecognizerStateEnded) {
         CGPoint touchPoint = [sender locationInView:self];
         CLLocationCoordinate2D touchMapCoordinate = [self convertPoint:touchPoint toCoordinateFromView:self];
-        if ([self.gestureDelegate conformsToProtocol:@protocol(BRSMapViewDelegate)]) {
+        if ([self.gestureDelegate respondsToSelector:@selector(mapView:didSingleTapOnPoint:)]) {
             [self.gestureDelegate mapView:self didSingleTapOnPoint:touchMapCoordinate];
         }
     }
@@ -104,6 +101,7 @@
 
 // Do nothing while double tap, let the mapview to handle double tap zooming.
 - (void)handleDoubleTap:(UITapGestureRecognizer *)sender
-{}
+{
+}
 
 @end

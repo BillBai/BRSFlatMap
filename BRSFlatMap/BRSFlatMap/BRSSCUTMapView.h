@@ -33,7 +33,8 @@ typedef NS_ENUM(NSInteger, SCUTCampus) {
 
 @protocol BRSMapViewDelegate <NSObject>
 
-- (void)mapView:(BRSSCUTMapView *)mapView didLongpressOnPoint:(CLLocationCoordinate2D)coord;
+- (void)mapView:(BRSSCUTMapView *)mapView LongPressingOnPoint:(CLLocationCoordinate2D)coord;
+- (void)mapView:(BRSSCUTMapView *)mapView didLongPressOnPoint:(CLLocationCoordinate2D)coord;
 - (void)mapView:(BRSSCUTMapView *)mapView didSingleTapOnPoint:(CLLocationCoordinate2D)coord;
 
 @end
