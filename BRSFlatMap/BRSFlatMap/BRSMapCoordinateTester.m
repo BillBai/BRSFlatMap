@@ -7,7 +7,7 @@
 //
 
 #import "BRSMapCoordinateTester.h"
-
+#import "BRSAnnotation.h"
 @implementation BRSMapCoordinateTester
 
 - (NSMutableArray *)testdata
@@ -32,7 +32,7 @@
 
 - (void)loadTestData
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"testdatav1" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"testdata" ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSDictionary *testdata = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
     self.testdata = testdata[@"features"];
@@ -51,6 +51,13 @@
             coords[i] = CLLocationCoordinate2DMake(lat, lon);
         }
         [self.mapView addOverlay:[MKPolygon polygonWithCoordinates:coords count:count]];
+        CLLocationDegrees lat = [(NSNumber *)feature[@"properties"][@"center"][1] doubleValue];
+        CLLocationDegrees lon = [(NSNumber *)feature[@"properties"][@"center"][0] doubleValue];
+        BRSAnnotation *annotation = [[BRSAnnotation alloc] init];
+        annotation.coordinate = CLLocationCoordinate2DMake(lat, lon);
+        annotation.title = feature[@"properties"][@"name"];
+        //annotation.subtitle = @"map";
+        [self.mapView addAnnotation:annotation];
     }
 }
 

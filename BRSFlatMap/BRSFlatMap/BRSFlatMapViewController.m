@@ -84,7 +84,7 @@
 - (void)mapView:(BRSSCUTMapView *)mapView didSingleTapOnPoint:(CLLocationCoordinate2D)coord
 {
     NSLog(@"did single tap");
-    [self.mapView removeAnnotations:[self.mapView annotations]];
+    //[self.mapView removeAnnotations:[self.mapView annotations]];
 }
 
 @end
