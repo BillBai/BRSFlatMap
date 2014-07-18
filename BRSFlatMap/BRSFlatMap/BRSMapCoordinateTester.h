@@ -16,6 +16,8 @@
 
 - (id)initWithMapView:(MKMapView *)mapview;
 
-- (void)addAllPolygonToMap;
+- (void)addAllPolygonsAndAnnotationsToMap;
+- (NSArray *)centerAnnotations;
+- (NSArray *)buildingPolygons;
 
 @end

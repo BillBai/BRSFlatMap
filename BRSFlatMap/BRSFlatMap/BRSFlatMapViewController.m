@@ -6,21 +6,35 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 
-
-
 #import "BRSFlatMapViewController.h"
 #import "BRSAnnotation.h"
+#import <CCHMapClusterController/CCHMapClusterController.h>
+/////////////tester///////////////
+#import "BRSMapCoordinateTester.h"
+/////////////////////////////////
+
+
+@interface BRSFlatMapViewController()
+
+@property (nonatomic, strong) CCHMapClusterController *mapClusterController;
+@property (nonatomic, strong) BRSMapCoordinateTester *coordTester;
+
+@end
+
 
 @implementation BRSFlatMapViewController
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     self.mapView = [[BRSSCUTMapView alloc] initWithFrame:self.view.frame Campus:SCUTCampusNorth];
     self.mapView.delegate = self;
     self.mapView.gestureDelegate = self;
     [self.view addSubview:self.mapView];
     self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
-    [self.coordTester addAllPolygonToMap];
+    self.mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
+    [self.mapClusterController addAnnotations:[self.coordTester centerAnnotations] withCompletionHandler:NULL];
 }
 
 #pragma mark - MKMapViewDelegate
