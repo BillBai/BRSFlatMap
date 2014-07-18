@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */; };
+		A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358CB1978C07C00A44402 /* BRSUtilities.m */; };
+		A94358CF1978CD8B00A44402 /* testdatav1.json in Resources */ = {isa = PBXBuildFile; fileRef = A94358CE1978CD8B00A44402 /* testdatav1.json */; };
 		A983182D1973752700CF1A4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182C1973752700CF1A4A /* Foundation.framework */; };
 		A983182F1973752700CF1A4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182E1973752700CF1A4A /* CoreGraphics.framework */; };
 		A98318311973752700CF1A4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318301973752700CF1A4A /* UIKit.framework */; };
@@ -39,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapCoordinateTester.h; path = BRSFlatMap/BRSMapCoordinateTester.h; sourceTree = "<group>"; };
+		A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapCoordinateTester.m; path = BRSFlatMap/BRSMapCoordinateTester.m; sourceTree = "<group>"; };
+		A94358CA1978C07C00A44402 /* BRSUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSUtilities.h; sourceTree = "<group>"; };
+		A94358CB1978C07C00A44402 /* BRSUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSUtilities.m; sourceTree = "<group>"; };
+		A94358CE1978CD8B00A44402 /* testdatav1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdatav1.json; sourceTree = "<group>"; };
 		A98318291973752700CF1A4A /* BRSFlatMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRSFlatMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A983182C1973752700CF1A4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A983182E1973752700CF1A4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A94358C91978BCB500A44402 /* tester */ = {
+			isa = PBXGroup;
+			children = (
+				A94358CE1978CD8B00A44402 /* testdatav1.json */,
+				A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */,
+				A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */,
+			);
+			name = tester;
+			sourceTree = "<group>";
+		};
+		A94358CD1978C08100A44402 /* Utlities */ = {
+			isa = PBXGroup;
+			children = (
+				A94358CA1978C07C00A44402 /* BRSUtilities.h */,
+				A94358CB1978C07C00A44402 /* BRSUtilities.m */,
+			);
+			name = Utlities;
+			sourceTree = "<group>";
+		};
 		A98318201973752700CF1A4A = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +164,8 @@
 				A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */,
 				A9BC6858197514410079BCA3 /* BRSAnnotation.h */,
 				A9BC6859197514410079BCA3 /* BRSAnnotation.m */,
+				A94358CD1978C08100A44402 /* Utlities */,
+				A94358C91978BCB500A44402 /* tester */,
 				A98318431973752700CF1A4A /* Images.xcassets */,
 				A98318401973752700CF1A4A /* BRSFlatMap.xcdatamodeld */,
 				A98318351973752700CF1A4A /* Supporting Files */,
@@ -250,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98318391973752700CF1A4A /* InfoPlist.strings in Resources */,
+				A94358CF1978CD8B00A44402 /* testdatav1.json in Resources */,
 				A98318441973752700CF1A4A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */,
 				A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */,
 				A9BC685A197514410079BCA3 /* BRSAnnotation.m in Sources */,
 				A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */,
@@ -276,6 +307,7 @@
 				A983183B1973752700CF1A4A /* main.m in Sources */,
 				A98318421973752700CF1A4A /* BRSFlatMap.xcdatamodeld in Sources */,
 				A9D093261974ED1D0000BAF7 /* BRSMapMetaDataManager.m in Sources */,
+				A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

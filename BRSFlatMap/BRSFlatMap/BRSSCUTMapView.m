@@ -7,6 +7,12 @@
 //
 #import "BRSSCUTMapView.h"
 
+@interface BRSSCUTMapView()
+@property (nonatomic) BOOL longPressing;
+
+@end
+
+
 @implementation BRSSCUTMapView
 
 + (MKCoordinateRegion)northCampusRegion
@@ -33,6 +39,7 @@
     
     [self switchToCampus:campus];
     [self addGestureRecognizers];
+    self.longPressing = NO;
     
     return self;
 }
@@ -59,7 +66,7 @@
     
     /*
      add this double tap gesture to prevent the double-tap-map-zoom gesture to be recognized as single tap.
-     this is just a hack.
+     this is a ugly hack.
      */
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc]
                       initWithTarget:self action:@selector(handleDoubleTap:)];
@@ -81,7 +88,11 @@
         if ([self.gestureDelegate respondsToSelector:@selector(mapView:didLongPressOnPoint:)]) {
             [self.gestureDelegate mapView:self didLongPressOnPoint:touchMapCoordinate];
         }
+        self.longPressing = NO;
     } else {
+        if (self.longPressing) { return; }
+        self.longPressing = YES;
+        
         if ([self.gestureDelegate respondsToSelector:@selector(mapView:LongPressingOnPoint:)]) {
             [self.gestureDelegate mapView:self LongPressingOnPoint:touchMapCoordinate];
         }

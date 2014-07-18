@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 
+
+
 #import "BRSFlatMapViewController.h"
 #import "BRSAnnotation.h"
 
@@ -17,6 +19,8 @@
     self.mapView.delegate = self;
     self.mapView.gestureDelegate = self;
     [self.view addSubview:self.mapView];
+    self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
+    [self.coordTester addAllPolygonToMap];
 }
 
 #pragma mark - MKMapViewDelegate
@@ -37,6 +41,20 @@
 	return annotationView;
 }
 
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[MKPolygon class]])
+	{
+		MKPolygonRenderer* render = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
+		render.fillColor = [UIColor grayColor];
+        render.strokeColor = [UIColor grayColor];
+        render.lineWidth = 3.0;
+        render.alpha = 0.4;
+        return render;
+	}
+	return nil;
+}
+
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {}
 
@@ -53,18 +71,20 @@
 - (void)mapView:(BRSSCUTMapView *)mapView LongPressingOnPoint:(CLLocationCoordinate2D)coord
 {
     NSLog(@"long pressing");
+    [BRSUtilities BRSCoordiinateLog:coord];
     
     BRSAnnotation *annotation = [[BRSAnnotation alloc] init];
     annotation.coordinate = coord;
     annotation.title = @"hello";
     annotation.subtitle = @"map";
     [self.mapView addAnnotation:annotation];
-    
+    [self.mapView selectAnnotation:annotation animated:YES];
 }
 
 - (void)mapView:(BRSSCUTMapView *)mapView didSingleTapOnPoint:(CLLocationCoordinate2D)coord
 {
     NSLog(@"did single tap");
+    [self.mapView removeAnnotations:[self.mapView annotations]];
 }
 
 @end
