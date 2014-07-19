@@ -9,12 +9,13 @@
 #import "BRSFlatMapViewController.h"
 #import "BRSAnnotation.h"
 #import <CCHMapClusterController/CCHMapClusterController.h>
+#import <CCHMapClusterController/CCHMapClusterControllerDelegate.h>
 /////////////tester///////////////
 #import "BRSMapCoordinateTester.h"
 /////////////////////////////////
 
 
-@interface BRSFlatMapViewController()
+@interface BRSFlatMapViewController() <CCHMapClusterControllerDelegate>
 
 @property (nonatomic, strong) CCHMapClusterController *mapClusterController;
 @property (nonatomic, strong) BRSMapCoordinateTester *coordTester;
@@ -32,10 +33,29 @@
     self.mapView.delegate = self;
     self.mapView.gestureDelegate = self;
     [self.view addSubview:self.mapView];
+    
     self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
     self.mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
+    self.mapClusterController.delegate = self;
     [self.mapClusterController addAnnotations:[self.coordTester centerAnnotations] withCompletionHandler:NULL];
+    //[self.coordTester addAllPolygonsAndAnnotationsToMap];
 }
+
+#pragma mark - CCHMapClusterControlerDelegate
+
+- (void)mapClusterController:(CCHMapClusterController *)mapClusterController willReuseMapClusterAnnotation:(CCHMapClusterAnnotation *)mapClusterAnnotation
+{}
+
+- (NSString *)mapClusterController:(CCHMapClusterController *)mapClusterController subtitleForMapClusterAnnotation:(CCHMapClusterAnnotation *)mapClusterAnnotation
+{
+    return nil;
+}
+
+- (NSString *)mapClusterController:(CCHMapClusterController *)mapClusterController titleForMapClusterAnnotation:(CCHMapClusterAnnotation *)mapClusterAnnotation
+{
+    return nil;
+}
+
 
 #pragma mark - MKMapViewDelegate
 
@@ -60,9 +80,9 @@
     if ([overlay isKindOfClass:[MKPolygon class]])
 	{
 		MKPolygonRenderer* render = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
-		render.fillColor = [UIColor grayColor];
-        render.strokeColor = [UIColor grayColor];
-        render.lineWidth = 3.0;
+		render.fillColor = [UIColor blueColor];
+        //render.strokeColor = [UIColor grayColor];
+        //render.lineWidth = 3.0;
         render.alpha = 0.4;
         return render;
 	}
@@ -73,7 +93,9 @@
 {}
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{}
+{
+    NSLog(@"now zoom level---> %f", [self getZoomLevel]);
+}
 
 #pragma mark - BRSMapViewDelegate
 
@@ -99,6 +121,13 @@
 {
     NSLog(@"did single tap");
     //[self.mapView removeAnnotations:[self.mapView annotations]];
+}
+
+#define MERCATOR_OFFSET 268435456
+#define MERCATOR_RADIUS 85445659.44705395
+- (double) getZoomLevel
+{
+    return 21.00 - log2(self.mapView.region.span.longitudeDelta * MERCATOR_RADIUS * M_PI / (180.0 * self.mapView.bounds.size.width));
 }
 
 @end

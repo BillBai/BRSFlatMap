@@ -29,6 +29,10 @@ typedef NS_ENUM(NSInteger, SCUTCampus) {
 
 - (void)switchToCampus:(SCUTCampus)campus;
 
+- (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate
+                  zoomLevel:(double)zoomLevel
+                   animated:(BOOL)animated;
+
 @end
 
 @protocol BRSMapViewDelegate <NSObject>
