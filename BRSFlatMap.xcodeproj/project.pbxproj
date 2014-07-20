@@ -1,1367 +1,583 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>87CD98CEB79F4E8E915183CA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A94358C61978BCB000A44402</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BRSMapCoordinateTester.h</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSMapCoordinateTester.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A94358C71978BCB000A44402</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BRSMapCoordinateTester.m</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSMapCoordinateTester.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A94358C81978BCB000A44402</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A94358C71978BCB000A44402</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A94358C91978BCB500A44402</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A94358D01978EFB800A44402</string>
-				<string>A94358C61978BCB000A44402</string>
-				<string>A94358C71978BCB000A44402</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>tester</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A94358CA1978C07C00A44402</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BRSUtilities.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A94358CB1978C07C00A44402</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BRSUtilities.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A94358CC1978C07C00A44402</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A94358CB1978C07C00A44402</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A94358CD1978C08100A44402</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A94358CA1978C07C00A44402</string>
-				<string>A94358CB1978C07C00A44402</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Utlities</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A94358D01978EFB800A44402</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>testdata.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A94358D11978EFB800A44402</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A94358D01978EFB800A44402</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318201973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318341973752700CF1A4A</string>
-				<string>A98318511973752700CF1A4A</string>
-				<string>A983182B1973752700CF1A4A</string>
-				<string>A983182A1973752700CF1A4A</string>
-				<string>EE0E00F8AD77460ABD6C0158</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318211973752700CF1A4A</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>BRS</string>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Bill Bai</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>A98318481973752700CF1A4A</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>A98318281973752700CF1A4A</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>A98318241973752700CF1A4A</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>A98318201973752700CF1A4A</string>
-			<key>productRefGroup</key>
-			<string>A983182A1973752700CF1A4A</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>A98318281973752700CF1A4A</string>
-				<string>A98318481973752700CF1A4A</string>
-			</array>
-		</dict>
-		<key>A98318241973752700CF1A4A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A98318591973752800CF1A4A</string>
-				<string>A983185A1973752800CF1A4A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A98318251973752700CF1A4A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A94358CC1978C07C00A44402</string>
-				<string>A9D093201974DEB40000BAF7</string>
-				<string>A9BC685A197514410079BCA3</string>
-				<string>A9D093231974E0D50000BAF7</string>
-				<string>A983183F1973752700CF1A4A</string>
-				<string>A983183B1973752700CF1A4A</string>
-				<string>A98318421973752700CF1A4A</string>
-				<string>A9D093261974ED1D0000BAF7</string>
-				<string>A94358C81978BCB000A44402</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A98318261973752700CF1A4A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A983182F1973752700CF1A4A</string>
-				<string>A98318331973752700CF1A4A</string>
-				<string>A98318311973752700CF1A4A</string>
-				<string>A983182D1973752700CF1A4A</string>
-				<string>BEE282826C114BCAA1344129</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A98318271973752700CF1A4A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A98318391973752700CF1A4A</string>
-				<string>A98318441973752700CF1A4A</string>
-				<string>A94358D11978EFB800A44402</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A98318281973752700CF1A4A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A983185B1973752800CF1A4A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>BC1F8955EAD8416AB52A5C29</string>
-				<string>A98318251973752700CF1A4A</string>
-				<string>A98318261973752700CF1A4A</string>
-				<string>A98318271973752700CF1A4A</string>
-				<string>87CD98CEB79F4E8E915183CA</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BRSFlatMap</string>
-			<key>productName</key>
-			<string>BRSFlatMap</string>
-			<key>productReference</key>
-			<string>A98318291973752700CF1A4A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>A98318291973752700CF1A4A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BRSFlatMap.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A983182A1973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318291973752700CF1A4A</string>
-				<string>A98318491973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A983182B1973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A983182C1973752700CF1A4A</string>
-				<string>A983182E1973752700CF1A4A</string>
-				<string>A98318301973752700CF1A4A</string>
-				<string>A98318321973752700CF1A4A</string>
-				<string>A983184A1973752700CF1A4A</string>
-				<string>C56A2D5733A74C14A1338DC1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A983182C1973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>A983182D1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A983182C1973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A983182E1973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>A983182F1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A983182E1973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318301973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>A98318311973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318301973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318321973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreData.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreData.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>A98318331973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318321973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318341973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A983183D1973752700CF1A4A</string>
-				<string>A983183E1973752700CF1A4A</string>
-				<string>A9D0931E1974DEB40000BAF7</string>
-				<string>A9D0931F1974DEB40000BAF7</string>
-				<string>A9D093241974ED1D0000BAF7</string>
-				<string>A9D093251974ED1D0000BAF7</string>
-				<string>A9D093211974E0D50000BAF7</string>
-				<string>A9D093221974E0D50000BAF7</string>
-				<string>A9BC6858197514410079BCA3</string>
-				<string>A9BC6859197514410079BCA3</string>
-				<string>A94358CD1978C08100A44402</string>
-				<string>A94358C91978BCB500A44402</string>
-				<string>A98318431973752700CF1A4A</string>
-				<string>A98318401973752700CF1A4A</string>
-				<string>A98318351973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BRSFlatMap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318351973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318361973752700CF1A4A</string>
-				<string>A98318371973752700CF1A4A</string>
-				<string>A983183A1973752700CF1A4A</string>
-				<string>A983183C1973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318361973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BRSFlatMap-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318371973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318381973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318381973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318391973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318371973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A983183A1973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A983183B1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A983183A1973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A983183C1973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BRSFlatMap-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A983183D1973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BRSAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A983183E1973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BRSAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A983183F1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A983183E1973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318401973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318411973752700CF1A4A</string>
-			</array>
-			<key>currentVersion</key>
-			<string>A98318411973752700CF1A4A</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>BRSFlatMap.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>A98318411973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>BRSFlatMap.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318421973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318401973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318431973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318441973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318431973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318451973752700CF1A4A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A98318581973752800CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A98318461973752700CF1A4A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A983184B1973752700CF1A4A</string>
-				<string>A983184E1973752700CF1A4A</string>
-				<string>A983184D1973752700CF1A4A</string>
-				<string>A983184C1973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A98318471973752700CF1A4A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A98318561973752800CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A98318481973752700CF1A4A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A983185E1973752800CF1A4A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>A98318451973752700CF1A4A</string>
-				<string>A98318461973752700CF1A4A</string>
-				<string>A98318471973752700CF1A4A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>A98318501973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BRSFlatMapTests</string>
-			<key>productName</key>
-			<string>BRSFlatMapTests</string>
-			<key>productReference</key>
-			<string>A98318491973752700CF1A4A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>A98318491973752700CF1A4A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BRSFlatMapTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A983184A1973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>A983184B1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A983184A1973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A983184C1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A983182C1973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A983184D1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318301973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A983184E1973752700CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318321973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A983184F1973752700CF1A4A</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>A98318211973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A98318281973752700CF1A4A</string>
-			<key>remoteInfo</key>
-			<string>BRSFlatMap</string>
-		</dict>
-		<key>A98318501973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>A98318281973752700CF1A4A</string>
-			<key>targetProxy</key>
-			<string>A983184F1973752700CF1A4A</string>
-		</dict>
-		<key>A98318511973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318571973752800CF1A4A</string>
-				<string>A98318521973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BRSFlatMapTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318521973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318531973752700CF1A4A</string>
-				<string>A98318541973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318531973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BRSFlatMapTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318541973752700CF1A4A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A98318551973752700CF1A4A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318551973752700CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318561973752800CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318541973752700CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318571973752800CF1A4A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BRSFlatMapTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A98318581973752800CF1A4A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A98318571973752800CF1A4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A98318591973752800CF1A4A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A983185A1973752800CF1A4A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A983185B1973752800CF1A4A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A983185C1973752800CF1A4A</string>
-				<string>A983185D1973752800CF1A4A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A983185C1973752800CF1A4A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EE0E00F8AD77460ABD6C0158</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BRSFlatMap/BRSFlatMap-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BRSFlatMap/BRSFlatMap-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A983185D1973752800CF1A4A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EE0E00F8AD77460ABD6C0158</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BRSFlatMap/BRSFlatMap-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BRSFlatMap/BRSFlatMap-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A983185E1973752800CF1A4A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A983185F1973752800CF1A4A</string>
-				<string>A98318601973752800CF1A4A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A983185F1973752800CF1A4A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/BRSFlatMap.app/BRSFlatMap</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BRSFlatMap/BRSFlatMap-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>BRSFlatMapTests/BRSFlatMapTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A98318601973752800CF1A4A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/BRSFlatMap.app/BRSFlatMap</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BRSFlatMap/BRSFlatMap-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BRSFlatMapTests/BRSFlatMapTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A9BC6858197514410079BCA3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BRSAnnotation.h</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSAnnotation.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9BC6859197514410079BCA3</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BRSAnnotation.m</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSAnnotation.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9BC685A197514410079BCA3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A9BC6859197514410079BCA3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A9D0931E1974DEB40000BAF7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BRSFlatMapViewController.h</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSFlatMapViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9D0931F1974DEB40000BAF7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BRSFlatMapViewController.m</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSFlatMapViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9D093201974DEB40000BAF7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A9D0931F1974DEB40000BAF7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A9D093211974E0D50000BAF7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BRSSCUTMapView.h</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSSCUTMapView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9D093221974E0D50000BAF7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BRSSCUTMapView.m</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSSCUTMapView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9D093231974E0D50000BAF7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A9D093221974E0D50000BAF7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A9D093241974ED1D0000BAF7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BRSMapMetaDataManager.h</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSMapMetaDataManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9D093251974ED1D0000BAF7</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BRSMapMetaDataManager.m</string>
-			<key>path</key>
-			<string>BRSFlatMap/BRSMapMetaDataManager.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9D093261974ED1D0000BAF7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A9D093251974ED1D0000BAF7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BC1F8955EAD8416AB52A5C29</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BEE282826C114BCAA1344129</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C56A2D5733A74C14A1338DC1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C56A2D5733A74C14A1338DC1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EE0E00F8AD77460ABD6C0158</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>A98318211973752700CF1A4A</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */; };
+		A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358CB1978C07C00A44402 /* BRSUtilities.m */; };
+		A94358D11978EFB800A44402 /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = A94358D01978EFB800A44402 /* testdata.json */; };
+		A983182D1973752700CF1A4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182C1973752700CF1A4A /* Foundation.framework */; };
+		A983182F1973752700CF1A4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182E1973752700CF1A4A /* CoreGraphics.framework */; };
+		A98318311973752700CF1A4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318301973752700CF1A4A /* UIKit.framework */; };
+		A98318331973752700CF1A4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318321973752700CF1A4A /* CoreData.framework */; };
+		A98318391973752700CF1A4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98318371973752700CF1A4A /* InfoPlist.strings */; };
+		A983183B1973752700CF1A4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A983183A1973752700CF1A4A /* main.m */; };
+		A983183F1973752700CF1A4A /* BRSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A983183E1973752700CF1A4A /* BRSAppDelegate.m */; };
+		A98318421973752700CF1A4A /* BRSFlatMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A98318401973752700CF1A4A /* BRSFlatMap.xcdatamodeld */; };
+		A98318441973752700CF1A4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98318431973752700CF1A4A /* Images.xcassets */; };
+		A983184B1973752700CF1A4A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983184A1973752700CF1A4A /* XCTest.framework */; };
+		A983184C1973752700CF1A4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182C1973752700CF1A4A /* Foundation.framework */; };
+		A983184D1973752700CF1A4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318301973752700CF1A4A /* UIKit.framework */; };
+		A983184E1973752700CF1A4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318321973752700CF1A4A /* CoreData.framework */; };
+		A98318561973752800CF1A4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98318541973752700CF1A4A /* InfoPlist.strings */; };
+		A98318581973752800CF1A4A /* BRSFlatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A98318571973752800CF1A4A /* BRSFlatMapTests.m */; };
+		A9A3669F197C13FC000F9EDB /* BRSMapSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A3669E197C13FC000F9EDB /* BRSMapSearchController.m */; };
+		A9BC685A197514410079BCA3 /* BRSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BC6859197514410079BCA3 /* BRSAnnotation.m */; };
+		A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */; };
+		A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */; };
+		A9D093261974ED1D0000BAF7 /* BRSMapMetaDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */; };
+		BEE282826C114BCAA1344129 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C56A2D5733A74C14A1338DC1 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A983184F1973752700CF1A4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98318211973752700CF1A4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98318281973752700CF1A4A;
+			remoteInfo = BRSFlatMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapCoordinateTester.h; path = BRSFlatMap/BRSMapCoordinateTester.h; sourceTree = "<group>"; };
+		A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapCoordinateTester.m; path = BRSFlatMap/BRSMapCoordinateTester.m; sourceTree = "<group>"; };
+		A94358CA1978C07C00A44402 /* BRSUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSUtilities.h; sourceTree = "<group>"; };
+		A94358CB1978C07C00A44402 /* BRSUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSUtilities.m; sourceTree = "<group>"; };
+		A94358D01978EFB800A44402 /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
+		A98318291973752700CF1A4A /* BRSFlatMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRSFlatMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A983182C1973752700CF1A4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A983182E1973752700CF1A4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A98318301973752700CF1A4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A98318321973752700CF1A4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A98318361973752700CF1A4A /* BRSFlatMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BRSFlatMap-Info.plist"; sourceTree = "<group>"; };
+		A98318381973752700CF1A4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A983183A1973752700CF1A4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A983183C1973752700CF1A4A /* BRSFlatMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BRSFlatMap-Prefix.pch"; sourceTree = "<group>"; };
+		A983183D1973752700CF1A4A /* BRSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRSAppDelegate.h; sourceTree = "<group>"; };
+		A983183E1973752700CF1A4A /* BRSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRSAppDelegate.m; sourceTree = "<group>"; };
+		A98318411973752700CF1A4A /* BRSFlatMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BRSFlatMap.xcdatamodel; sourceTree = "<group>"; };
+		A98318431973752700CF1A4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A98318491973752700CF1A4A /* BRSFlatMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BRSFlatMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A983184A1973752700CF1A4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A98318531973752700CF1A4A /* BRSFlatMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BRSFlatMapTests-Info.plist"; sourceTree = "<group>"; };
+		A98318551973752700CF1A4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A98318571973752800CF1A4A /* BRSFlatMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRSFlatMapTests.m; sourceTree = "<group>"; };
+		A9A3669D197C13FC000F9EDB /* BRSMapSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapSearchController.h; path = BRSFlatMap/BRSMapSearchController.h; sourceTree = "<group>"; };
+		A9A3669E197C13FC000F9EDB /* BRSMapSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapSearchController.m; path = BRSFlatMap/BRSMapSearchController.m; sourceTree = "<group>"; };
+		A9BC6858197514410079BCA3 /* BRSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSAnnotation.h; path = BRSFlatMap/BRSAnnotation.h; sourceTree = "<group>"; };
+		A9BC6859197514410079BCA3 /* BRSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSAnnotation.m; path = BRSFlatMap/BRSAnnotation.m; sourceTree = "<group>"; };
+		A9D0931E1974DEB40000BAF7 /* BRSFlatMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSFlatMapViewController.h; path = BRSFlatMap/BRSFlatMapViewController.h; sourceTree = "<group>"; };
+		A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSFlatMapViewController.m; path = BRSFlatMap/BRSFlatMapViewController.m; sourceTree = "<group>"; };
+		A9D093211974E0D50000BAF7 /* BRSSCUTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSSCUTMapView.h; path = BRSFlatMap/BRSSCUTMapView.h; sourceTree = "<group>"; };
+		A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSSCUTMapView.m; path = BRSFlatMap/BRSSCUTMapView.m; sourceTree = "<group>"; };
+		A9D093241974ED1D0000BAF7 /* BRSMapMetaDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapMetaDataManager.h; path = BRSFlatMap/BRSMapMetaDataManager.h; sourceTree = "<group>"; };
+		A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapMetaDataManager.m; path = BRSFlatMap/BRSMapMetaDataManager.m; sourceTree = "<group>"; };
+		C56A2D5733A74C14A1338DC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0E00F8AD77460ABD6C0158 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A98318261973752700CF1A4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A983182F1973752700CF1A4A /* CoreGraphics.framework in Frameworks */,
+				A98318331973752700CF1A4A /* CoreData.framework in Frameworks */,
+				A98318311973752700CF1A4A /* UIKit.framework in Frameworks */,
+				A983182D1973752700CF1A4A /* Foundation.framework in Frameworks */,
+				BEE282826C114BCAA1344129 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98318461973752700CF1A4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A983184B1973752700CF1A4A /* XCTest.framework in Frameworks */,
+				A983184E1973752700CF1A4A /* CoreData.framework in Frameworks */,
+				A983184D1973752700CF1A4A /* UIKit.framework in Frameworks */,
+				A983184C1973752700CF1A4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A94358C91978BCB500A44402 /* tester */ = {
+			isa = PBXGroup;
+			children = (
+				A94358D01978EFB800A44402 /* testdata.json */,
+				A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */,
+				A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */,
+			);
+			name = tester;
+			sourceTree = "<group>";
+		};
+		A94358CD1978C08100A44402 /* Utlities */ = {
+			isa = PBXGroup;
+			children = (
+				A94358CA1978C07C00A44402 /* BRSUtilities.h */,
+				A94358CB1978C07C00A44402 /* BRSUtilities.m */,
+			);
+			name = Utlities;
+			sourceTree = "<group>";
+		};
+		A98318201973752700CF1A4A = {
+			isa = PBXGroup;
+			children = (
+				A98318341973752700CF1A4A /* BRSFlatMap */,
+				A98318511973752700CF1A4A /* BRSFlatMapTests */,
+				A983182B1973752700CF1A4A /* Frameworks */,
+				A983182A1973752700CF1A4A /* Products */,
+				EE0E00F8AD77460ABD6C0158 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A983182A1973752700CF1A4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A98318291973752700CF1A4A /* BRSFlatMap.app */,
+				A98318491973752700CF1A4A /* BRSFlatMapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A983182B1973752700CF1A4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A983182C1973752700CF1A4A /* Foundation.framework */,
+				A983182E1973752700CF1A4A /* CoreGraphics.framework */,
+				A98318301973752700CF1A4A /* UIKit.framework */,
+				A98318321973752700CF1A4A /* CoreData.framework */,
+				A983184A1973752700CF1A4A /* XCTest.framework */,
+				C56A2D5733A74C14A1338DC1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A98318341973752700CF1A4A /* BRSFlatMap */ = {
+			isa = PBXGroup;
+			children = (
+				A983183D1973752700CF1A4A /* BRSAppDelegate.h */,
+				A983183E1973752700CF1A4A /* BRSAppDelegate.m */,
+				A9D0931E1974DEB40000BAF7 /* BRSFlatMapViewController.h */,
+				A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */,
+				A9D093241974ED1D0000BAF7 /* BRSMapMetaDataManager.h */,
+				A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */,
+				A9D093211974E0D50000BAF7 /* BRSSCUTMapView.h */,
+				A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */,
+				A9A3669D197C13FC000F9EDB /* BRSMapSearchController.h */,
+				A9A3669E197C13FC000F9EDB /* BRSMapSearchController.m */,
+				A9BC6858197514410079BCA3 /* BRSAnnotation.h */,
+				A9BC6859197514410079BCA3 /* BRSAnnotation.m */,
+				A94358CD1978C08100A44402 /* Utlities */,
+				A94358C91978BCB500A44402 /* tester */,
+				A98318431973752700CF1A4A /* Images.xcassets */,
+				A98318401973752700CF1A4A /* BRSFlatMap.xcdatamodeld */,
+				A98318351973752700CF1A4A /* Supporting Files */,
+			);
+			path = BRSFlatMap;
+			sourceTree = "<group>";
+		};
+		A98318351973752700CF1A4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A98318361973752700CF1A4A /* BRSFlatMap-Info.plist */,
+				A98318371973752700CF1A4A /* InfoPlist.strings */,
+				A983183A1973752700CF1A4A /* main.m */,
+				A983183C1973752700CF1A4A /* BRSFlatMap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A98318511973752700CF1A4A /* BRSFlatMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				A98318571973752800CF1A4A /* BRSFlatMapTests.m */,
+				A98318521973752700CF1A4A /* Supporting Files */,
+			);
+			path = BRSFlatMapTests;
+			sourceTree = "<group>";
+		};
+		A98318521973752700CF1A4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A98318531973752700CF1A4A /* BRSFlatMapTests-Info.plist */,
+				A98318541973752700CF1A4A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A98318281973752700CF1A4A /* BRSFlatMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A983185B1973752800CF1A4A /* Build configuration list for PBXNativeTarget "BRSFlatMap" */;
+			buildPhases = (
+				BC1F8955EAD8416AB52A5C29 /* Check Pods Manifest.lock */,
+				A98318251973752700CF1A4A /* Sources */,
+				A98318261973752700CF1A4A /* Frameworks */,
+				A98318271973752700CF1A4A /* Resources */,
+				87CD98CEB79F4E8E915183CA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BRSFlatMap;
+			productName = BRSFlatMap;
+			productReference = A98318291973752700CF1A4A /* BRSFlatMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A98318481973752700CF1A4A /* BRSFlatMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A983185E1973752800CF1A4A /* Build configuration list for PBXNativeTarget "BRSFlatMapTests" */;
+			buildPhases = (
+				A98318451973752700CF1A4A /* Sources */,
+				A98318461973752700CF1A4A /* Frameworks */,
+				A98318471973752700CF1A4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98318501973752700CF1A4A /* PBXTargetDependency */,
+			);
+			name = BRSFlatMapTests;
+			productName = BRSFlatMapTests;
+			productReference = A98318491973752700CF1A4A /* BRSFlatMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A98318211973752700CF1A4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BRS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Bill Bai";
+				TargetAttributes = {
+					A98318481973752700CF1A4A = {
+						TestTargetID = A98318281973752700CF1A4A;
+					};
+				};
+			};
+			buildConfigurationList = A98318241973752700CF1A4A /* Build configuration list for PBXProject "BRSFlatMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A98318201973752700CF1A4A;
+			productRefGroup = A983182A1973752700CF1A4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A98318281973752700CF1A4A /* BRSFlatMap */,
+				A98318481973752700CF1A4A /* BRSFlatMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A98318271973752700CF1A4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98318391973752700CF1A4A /* InfoPlist.strings in Resources */,
+				A98318441973752700CF1A4A /* Images.xcassets in Resources */,
+				A94358D11978EFB800A44402 /* testdata.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98318471973752700CF1A4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98318561973752800CF1A4A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		87CD98CEB79F4E8E915183CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC1F8955EAD8416AB52A5C29 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A98318251973752700CF1A4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9A3669F197C13FC000F9EDB /* BRSMapSearchController.m in Sources */,
+				A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */,
+				A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */,
+				A9BC685A197514410079BCA3 /* BRSAnnotation.m in Sources */,
+				A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */,
+				A983183F1973752700CF1A4A /* BRSAppDelegate.m in Sources */,
+				A983183B1973752700CF1A4A /* main.m in Sources */,
+				A98318421973752700CF1A4A /* BRSFlatMap.xcdatamodeld in Sources */,
+				A9D093261974ED1D0000BAF7 /* BRSMapMetaDataManager.m in Sources */,
+				A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98318451973752700CF1A4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98318581973752800CF1A4A /* BRSFlatMapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A98318501973752700CF1A4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98318281973752700CF1A4A /* BRSFlatMap */;
+			targetProxy = A983184F1973752700CF1A4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A98318371973752700CF1A4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98318381973752700CF1A4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A98318541973752700CF1A4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98318551973752700CF1A4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A98318591973752800CF1A4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A983185A1973752800CF1A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A983185C1973752800CF1A4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0E00F8AD77460ABD6C0158 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRSFlatMap/BRSFlatMap-Prefix.pch";
+				INFOPLIST_FILE = "BRSFlatMap/BRSFlatMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A983185D1973752800CF1A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0E00F8AD77460ABD6C0158 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRSFlatMap/BRSFlatMap-Prefix.pch";
+				INFOPLIST_FILE = "BRSFlatMap/BRSFlatMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A983185F1973752800CF1A4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BRSFlatMap.app/BRSFlatMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRSFlatMap/BRSFlatMap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BRSFlatMapTests/BRSFlatMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A98318601973752800CF1A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BRSFlatMap.app/BRSFlatMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BRSFlatMap/BRSFlatMap-Prefix.pch";
+				INFOPLIST_FILE = "BRSFlatMapTests/BRSFlatMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A98318241973752700CF1A4A /* Build configuration list for PBXProject "BRSFlatMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98318591973752800CF1A4A /* Debug */,
+				A983185A1973752800CF1A4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A983185B1973752800CF1A4A /* Build configuration list for PBXNativeTarget "BRSFlatMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A983185C1973752800CF1A4A /* Debug */,
+				A983185D1973752800CF1A4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A983185E1973752800CF1A4A /* Build configuration list for PBXNativeTarget "BRSFlatMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A983185F1973752800CF1A4A /* Debug */,
+				A98318601973752800CF1A4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A98318401973752700CF1A4A /* BRSFlatMap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A98318411973752700CF1A4A /* BRSFlatMap.xcdatamodel */,
+			);
+			currentVersion = A98318411973752700CF1A4A /* BRSFlatMap.xcdatamodel */;
+			path = BRSFlatMap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A98318211973752700CF1A4A /* Project object */;
+}

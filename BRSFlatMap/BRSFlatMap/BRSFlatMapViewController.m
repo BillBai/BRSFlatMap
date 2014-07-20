@@ -8,6 +8,7 @@
 
 #import "BRSFlatMapViewController.h"
 #import "BRSAnnotation.h"
+#import "BRSMapSearchController.h"
 #import <CCHMapClusterController/CCHMapClusterController.h>
 #import <CCHMapClusterController/CCHMapClusterControllerDelegate.h>
 /////////////tester///////////////
@@ -19,7 +20,7 @@
 
 @property (nonatomic, strong) CCHMapClusterController *mapClusterController;
 @property (nonatomic, strong) BRSMapCoordinateTester *coordTester;
-
+@property (nonatomic, strong) BRSMapSearchController *searchController;
 @end
 
 
@@ -32,13 +33,18 @@
     self.mapView = [[BRSSCUTMapView alloc] initWithFrame:self.view.frame Campus:SCUTCampusNorth];
     self.mapView.delegate = self;
     self.mapView.gestureDelegate = self;
+    self.mapView.showsUserLocation = YES;
+    
     [self.view addSubview:self.mapView];
     
     self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
+    //[self.coordTester addAllPolygonsAndAnnotationsToMap];
+    
     self.mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
     self.mapClusterController.delegate = self;
     [self.mapClusterController addAnnotations:[self.coordTester centerAnnotations] withCompletionHandler:NULL];
-    //[self.coordTester addAllPolygonsAndAnnotationsToMap];
+    
+    self.searchController = [[BRSMapSearchController  alloc] init];
 }
 
 #pragma mark - CCHMapClusterControlerDelegate
