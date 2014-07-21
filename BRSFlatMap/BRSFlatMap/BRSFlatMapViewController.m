@@ -45,6 +45,9 @@
     [self.mapClusterController addAnnotations:[self.coordTester centerAnnotations] withCompletionHandler:NULL];
     
     self.searchController = [[BRSMapSearchController  alloc] init];
+    CLLocationCoordinate2D userLocation = self.mapView.userLocation.location.coordinate;
+    [self.searchController startSearch:@"华南理工" forLocation:userLocation];
+    NSLog(@"%@", self.searchController.resultPlaces);
 }
 
 #pragma mark - CCHMapClusterControlerDelegate
@@ -67,6 +70,10 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
+    
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
 	MKPinAnnotationView *annotationView = nil;
 	if ([annotation isKindOfClass:[BRSAnnotation class]])
 	{
@@ -128,6 +135,9 @@
     NSLog(@"did single tap");
     //[self.mapView removeAnnotations:[self.mapView annotations]];
 }
+
+
+#pragma mark - Map Utlities
 
 #define MERCATOR_OFFSET 268435456
 #define MERCATOR_RADIUS 85445659.44705395

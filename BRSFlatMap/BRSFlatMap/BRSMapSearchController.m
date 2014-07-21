@@ -66,8 +66,7 @@
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     };
     
-    if (self.localSearch != nil)
-    {
+    if (self.localSearch != nil) {
         self.localSearch = nil;
     }
     self.localSearch = [[MKLocalSearch alloc] initWithRequest:request];
