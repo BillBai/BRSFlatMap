@@ -5,7 +5,9 @@
 //  Created by Bill Bai on 7/15/14.
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
+#import "MKPolygon+PointInPolygon.h"
 
+#import "BRSPlace.h"
 #import "BRSUtilities.h"
 #import "BRSFlatMapViewController.h"
 #import "BRSAnnotation.h"
@@ -126,8 +128,16 @@
     
     BRSAnnotation *annotation = [[BRSAnnotation alloc] init];
     annotation.coordinate = coord;
-    annotation.title = @"hello";
-    annotation.subtitle = @"map";
+    
+    BRSPlace *place = [self placeForCoordinate:coord];
+    if (place) {
+        annotation.title = place.title;
+        annotation.subtitle = place.subtitle;
+    } else {
+        annotation.title = @"hello";
+        annotation.subtitle = @"map";
+    }
+    
     [self.mapView addAnnotation:annotation];
     [self.mapView selectAnnotation:annotation animated:YES];
 }
@@ -140,6 +150,17 @@
 
 
 #pragma mark - Map Utlities
+
+- (BRSPlace *)placeForCoordinate:(CLLocationCoordinate2D)coord
+{
+    for (BRSPlace *place in [BRSMapMetaDataManager sharedDataManager].flatMapMetaData) {
+        if ([place.boundaryPolygon coordInPolygon:coord]) {
+            return place;
+        }
+    }
+    
+    return nil;
+}
 
 #define MERCATOR_OFFSET 268435456
 #define MERCATOR_RADIUS 85445659.44705395

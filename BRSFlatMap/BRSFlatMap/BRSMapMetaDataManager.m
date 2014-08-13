@@ -52,9 +52,9 @@ static NSString *kJSONMapFeaturesKey = @"features";
     
     NSMutableArray *places = [[NSMutableArray alloc] init];
     for (NSDictionary *feature in flatMapData[kJSONMapFeaturesKey]) {
-        CLLocationCoordinate2D center = [BRSUtilities locationCoordinateFromArray:feature[@"properties.center"]];
-        NSString *title = feature[@"properties.name"];
-        MKPolygon *boudary = [BRSUtilities polygonFromArray:feature[@"geometry.coordinates"]];
+        CLLocationCoordinate2D center = [BRSUtilities locationCoordinateFromArray:feature[@"properties"][@"center"]];
+        NSString *title = feature[@"properties"][@"name"];
+        MKPolygon *boudary = [BRSUtilities polygonFromArray:feature[@"geometry"][@"coordinates"]];
         BRSPlace *place = [[BRSPlace alloc] initWithTitle:title Subtitle:nil coord:center boudary:boudary type:0 subPlaces:nil];
         [places addObject:place];
     }

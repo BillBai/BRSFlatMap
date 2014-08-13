@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A941198F199BAE210024940E /* testdata_2.json in Resources */ = {isa = PBXBuildFile; fileRef = A941198E199BAE210024940E /* testdata_2.json */; };
 		A9411992199BC9660024940E /* BRSPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = A9411991199BC9660024940E /* BRSPlace.m */; };
+		A9411995199BD79D0024940E /* MKPolygon+PointInPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = A9411994199BD79D0024940E /* MKPolygon+PointInPolygon.m */; };
 		A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */; };
 		A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358CB1978C07C00A44402 /* BRSUtilities.m */; };
 		A983182D1973752700CF1A4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182C1973752700CF1A4A /* Foundation.framework */; };
@@ -48,6 +49,8 @@
 		A941198E199BAE210024940E /* testdata_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata_2.json; sourceTree = "<group>"; };
 		A9411990199BC9660024940E /* BRSPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSPlace.h; path = BRSFlatMap/BRSPlace.h; sourceTree = "<group>"; };
 		A9411991199BC9660024940E /* BRSPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSPlace.m; path = BRSFlatMap/BRSPlace.m; sourceTree = "<group>"; };
+		A9411993199BD79D0024940E /* MKPolygon+PointInPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPolygon+PointInPolygon.h"; path = "BRSFlatMap/MKPolygon+PointInPolygon.h"; sourceTree = "<group>"; };
+		A9411994199BD79D0024940E /* MKPolygon+PointInPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPolygon+PointInPolygon.m"; path = "BRSFlatMap/MKPolygon+PointInPolygon.m"; sourceTree = "<group>"; };
 		A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapCoordinateTester.h; path = BRSFlatMap/BRSMapCoordinateTester.h; sourceTree = "<group>"; };
 		A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapCoordinateTester.m; path = BRSFlatMap/BRSMapCoordinateTester.m; sourceTree = "<group>"; };
 		A94358CA1978C07C00A44402 /* BRSUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSUtilities.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				A9BC6859197514410079BCA3 /* BRSAnnotation.m */,
 				A9411990199BC9660024940E /* BRSPlace.h */,
 				A9411991199BC9660024940E /* BRSPlace.m */,
+				A9411993199BD79D0024940E /* MKPolygon+PointInPolygon.h */,
+				A9411994199BD79D0024940E /* MKPolygon+PointInPolygon.m */,
 				A94358CD1978C08100A44402 /* Utlities */,
 				A94358C91978BCB500A44402 /* tester */,
 				A98318431973752700CF1A4A /* Images.xcassets */,
@@ -355,6 +360,7 @@
 				A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */,
 				A9BC685A197514410079BCA3 /* BRSAnnotation.m in Sources */,
 				A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */,
+				A9411995199BD79D0024940E /* MKPolygon+PointInPolygon.m in Sources */,
 				A983183F1973752700CF1A4A /* BRSAppDelegate.m in Sources */,
 				A983183B1973752700CF1A4A /* main.m in Sources */,
 				A98318421973752700CF1A4A /* BRSFlatMap.xcdatamodeld in Sources */,
