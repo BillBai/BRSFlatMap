@@ -54,14 +54,10 @@
         }
         else
         {
-            self.resultPlaces = [response mapItems];
-            
-            // used for later when setting the map's region in "prepareForSegue"
-            //self.boundingRegion = response.boundingRegion;
-            
-            //self.viewAllButton.enabled = self.places != nil ? YES : NO;
-            
-            //[self.tableView reloadData];
+            if ([self.delegate respondsToSelector:@selector(MapSearchController:DidGetSearchResponse:)]) {
+                NSLog(@"%@", [response mapItems]);
+                [self.delegate MapSearchController:self DidGetSearchResponse:response];
+            }
         }
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     };

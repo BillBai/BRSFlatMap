@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BRSPlace.h"
 
 @interface BRSMapMetaDataManager : NSObject
+
+@property (nonatomic, strong) NSArray *flatMapMetaData;
+
++ (instancetype)sharedDataManager;
 
 @end

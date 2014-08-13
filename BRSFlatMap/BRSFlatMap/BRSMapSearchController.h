@@ -8,11 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol BRSMapSearchDelegate;
+
 @interface BRSMapSearchController : NSObject
 
 @property (nonatomic, strong) NSArray *resultPlaces;
-
+@property (nonatomic, weak) id<BRSMapSearchDelegate> delegate;
 
 - (void)startSearch:(NSString *)searchString forLocation:(CLLocationCoordinate2D)location;
+
+@end
+
+
+
+@protocol BRSMapSearchDelegate <NSObject>
+
+- (void)MapSearchController:(BRSMapSearchController *) mapSearchController DidGetSearchResponse:(MKLocalSearchResponse *) response;
 
 @end

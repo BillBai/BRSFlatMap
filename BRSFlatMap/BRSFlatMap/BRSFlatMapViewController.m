@@ -37,17 +37,18 @@
     
     [self.view addSubview:self.mapView];
     
-    self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
+    //self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
     //[self.coordTester addAllPolygonsAndAnnotationsToMap];
     
-    self.mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
-    self.mapClusterController.delegate = self;
-    [self.mapClusterController addAnnotations:[self.coordTester centerAnnotations] withCompletionHandler:NULL];
+//    self.mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
+//    self.mapClusterController.delegate = self;
+//    [self.mapClusterController addAnnotations:[self.coordTester centerAnnotations] withCompletionHandler:NULL];
     
-    self.searchController = [[BRSMapSearchController  alloc] init];
-    CLLocationCoordinate2D userLocation = self.mapView.userLocation.location.coordinate;
-    [self.searchController startSearch:@"华南理工" forLocation:userLocation];
-    NSLog(@"%@", self.searchController.resultPlaces);
+//    self.searchController = [[BRSMapSearchController alloc] init];
+//    CLLocationCoordinate2D userLocation = CLLocationCoordinate2DMake(23.15651951321689, 113.34891394936777);
+//    [BRSUtilities BRSCoordiinateLog:userLocation];
+//    [self.searchController startSearch:@"华南理工" forLocation:userLocation];
+    //NSLog(@"%@", self.searchController.resultPlaces);
 }
 
 #pragma mark - CCHMapClusterControlerDelegate

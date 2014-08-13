@@ -32,10 +32,15 @@
 
 - (void)loadTestData
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"testdata" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"testdata_2" ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSDictionary *testdata = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
     self.testdata = testdata[@"features"];
+    
+}
+
+- (void)addAnnotationsToMapView:(NSArray *)annotations
+{
     
 }
 

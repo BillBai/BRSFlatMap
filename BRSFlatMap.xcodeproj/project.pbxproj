@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A941198F199BAE210024940E /* testdata_2.json in Resources */ = {isa = PBXBuildFile; fileRef = A941198E199BAE210024940E /* testdata_2.json */; };
+		A9411992199BC9660024940E /* BRSPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = A9411991199BC9660024940E /* BRSPlace.m */; };
 		A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */; };
 		A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358CB1978C07C00A44402 /* BRSUtilities.m */; };
-		A94358D11978EFB800A44402 /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = A94358D01978EFB800A44402 /* testdata.json */; };
 		A983182D1973752700CF1A4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182C1973752700CF1A4A /* Foundation.framework */; };
 		A983182F1973752700CF1A4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182E1973752700CF1A4A /* CoreGraphics.framework */; };
 		A98318311973752700CF1A4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318301973752700CF1A4A /* UIKit.framework */; };
@@ -44,11 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A941198E199BAE210024940E /* testdata_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata_2.json; sourceTree = "<group>"; };
+		A9411990199BC9660024940E /* BRSPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSPlace.h; path = BRSFlatMap/BRSPlace.h; sourceTree = "<group>"; };
+		A9411991199BC9660024940E /* BRSPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSPlace.m; path = BRSFlatMap/BRSPlace.m; sourceTree = "<group>"; };
 		A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapCoordinateTester.h; path = BRSFlatMap/BRSMapCoordinateTester.h; sourceTree = "<group>"; };
 		A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapCoordinateTester.m; path = BRSFlatMap/BRSMapCoordinateTester.m; sourceTree = "<group>"; };
 		A94358CA1978C07C00A44402 /* BRSUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSUtilities.h; sourceTree = "<group>"; };
 		A94358CB1978C07C00A44402 /* BRSUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSUtilities.m; sourceTree = "<group>"; };
-		A94358D01978EFB800A44402 /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		A98318291973752700CF1A4A /* BRSFlatMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRSFlatMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A983182C1973752700CF1A4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A983182E1973752700CF1A4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,7 +114,7 @@
 		A94358C91978BCB500A44402 /* tester */ = {
 			isa = PBXGroup;
 			children = (
-				A94358D01978EFB800A44402 /* testdata.json */,
+				A941198E199BAE210024940E /* testdata_2.json */,
 				A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */,
 				A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */,
 			);
@@ -175,6 +178,8 @@
 				A9A3669E197C13FC000F9EDB /* BRSMapSearchController.m */,
 				A9BC6858197514410079BCA3 /* BRSAnnotation.h */,
 				A9BC6859197514410079BCA3 /* BRSAnnotation.m */,
+				A9411990199BC9660024940E /* BRSPlace.h */,
+				A9411991199BC9660024940E /* BRSPlace.m */,
 				A94358CD1978C08100A44402 /* Utlities */,
 				A94358C91978BCB500A44402 /* tester */,
 				A98318431973752700CF1A4A /* Images.xcassets */,
@@ -293,7 +298,7 @@
 			files = (
 				A98318391973752700CF1A4A /* InfoPlist.strings in Resources */,
 				A98318441973752700CF1A4A /* Images.xcassets in Resources */,
-				A94358D11978EFB800A44402 /* testdata.json in Resources */,
+				A941198F199BAE210024940E /* testdata_2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +360,7 @@
 				A98318421973752700CF1A4A /* BRSFlatMap.xcdatamodeld in Sources */,
 				A9D093261974ED1D0000BAF7 /* BRSMapMetaDataManager.m in Sources */,
 				A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */,
+				A9411992199BC9660024940E /* BRSPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
