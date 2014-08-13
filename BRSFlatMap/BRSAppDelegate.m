@@ -8,6 +8,7 @@
 
 #import "BRSAppDelegate.h"
 #import "BRSFlatMapViewController.h"
+#import "BRSMapMetaDataManager.h"
 
 @implementation BRSAppDelegate
 
@@ -22,6 +23,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     BRSFlatMapViewController *mapViewControlelr = [[BRSFlatMapViewController alloc] init];
+    [BRSMapMetaDataManager sharedDataManager];
     self.window.rootViewController = mapViewControlelr;
     [self.window makeKeyAndVisible];
     return YES;

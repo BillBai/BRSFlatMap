@@ -12,4 +12,7 @@
 
 + (void)BRSCoordiinateLog:(CLLocationCoordinate2D)coordinate;
 
++ (CLLocationCoordinate2D)locationCoordinateFromArray:(NSArray *)coordArray;
++ (MKPolygon *)polygonFromArray:(NSArray *)boundaryArray;
+
 @end

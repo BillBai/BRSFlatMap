@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 
+#import "BRSUtilities.h"
 #import "BRSFlatMapViewController.h"
 #import "BRSAnnotation.h"
 #import "BRSMapSearchController.h"
