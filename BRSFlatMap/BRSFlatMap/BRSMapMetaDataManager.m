@@ -46,7 +46,7 @@ static NSString *kJSONMapFeaturesKey = @"features";
 
 - (void)loadFlatMapDataFromJSONFile
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"testdata_2" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"North" ofType:@"geojson"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSDictionary *flatMapData = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
     

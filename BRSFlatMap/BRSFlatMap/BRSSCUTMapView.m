@@ -90,7 +90,9 @@
         }
         self.longPressing = NO;
     } else {
-        if (self.longPressing) { return; }
+        if (self.longPressing) {
+            return;
+        }
         self.longPressing = YES;
         
         if ([self.gestureDelegate respondsToSelector:@selector(mapView:LongPressingOnPoint:)]) {

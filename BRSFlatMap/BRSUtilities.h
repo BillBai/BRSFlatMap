@@ -14,5 +14,5 @@
 
 + (CLLocationCoordinate2D)locationCoordinateFromArray:(NSArray *)coordArray;
 + (MKPolygon *)polygonFromArray:(NSArray *)boundaryArray;
-
++ (CLLocationDistance)distanceFromCoord1:(CLLocationCoordinate2D)coord1 toCoord2:(CLLocationCoordinate2D)coord2;
 @end

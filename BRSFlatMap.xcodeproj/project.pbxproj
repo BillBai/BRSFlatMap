@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A941198F199BAE210024940E /* testdata_2.json in Resources */ = {isa = PBXBuildFile; fileRef = A941198E199BAE210024940E /* testdata_2.json */; };
 		A9411992199BC9660024940E /* BRSPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = A9411991199BC9660024940E /* BRSPlace.m */; };
 		A9411995199BD79D0024940E /* MKPolygon+PointInPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = A9411994199BD79D0024940E /* MKPolygon+PointInPolygon.m */; };
+		A9411999199C92C70024940E /* North.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A9411998199C92C70024940E /* North.geojson */; };
+		A941199C199C98F70024940E /* UIColor+BRSMapColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A941199B199C98F70024940E /* UIColor+BRSMapColor.m */; };
 		A94358C81978BCB000A44402 /* BRSMapCoordinateTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */; };
 		A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A94358CB1978C07C00A44402 /* BRSUtilities.m */; };
 		A983182D1973752700CF1A4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A983182C1973752700CF1A4A /* Foundation.framework */; };
@@ -46,11 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A941198E199BAE210024940E /* testdata_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata_2.json; sourceTree = "<group>"; };
 		A9411990199BC9660024940E /* BRSPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSPlace.h; path = BRSFlatMap/BRSPlace.h; sourceTree = "<group>"; };
 		A9411991199BC9660024940E /* BRSPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSPlace.m; path = BRSFlatMap/BRSPlace.m; sourceTree = "<group>"; };
 		A9411993199BD79D0024940E /* MKPolygon+PointInPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPolygon+PointInPolygon.h"; path = "BRSFlatMap/MKPolygon+PointInPolygon.h"; sourceTree = "<group>"; };
 		A9411994199BD79D0024940E /* MKPolygon+PointInPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPolygon+PointInPolygon.m"; path = "BRSFlatMap/MKPolygon+PointInPolygon.m"; sourceTree = "<group>"; };
+		A9411998199C92C70024940E /* North.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = North.geojson; sourceTree = "<group>"; };
+		A941199A199C98F70024940E /* UIColor+BRSMapColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+BRSMapColor.h"; path = "BRSFlatMap/UIColor+BRSMapColor.h"; sourceTree = "<group>"; };
+		A941199B199C98F70024940E /* UIColor+BRSMapColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BRSMapColor.m"; path = "BRSFlatMap/UIColor+BRSMapColor.m"; sourceTree = "<group>"; };
 		A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapCoordinateTester.h; path = BRSFlatMap/BRSMapCoordinateTester.h; sourceTree = "<group>"; };
 		A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapCoordinateTester.m; path = BRSFlatMap/BRSMapCoordinateTester.m; sourceTree = "<group>"; };
 		A94358CA1978C07C00A44402 /* BRSUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSUtilities.h; sourceTree = "<group>"; };
@@ -117,7 +120,7 @@
 		A94358C91978BCB500A44402 /* tester */ = {
 			isa = PBXGroup;
 			children = (
-				A941198E199BAE210024940E /* testdata_2.json */,
+				A9411998199C92C70024940E /* North.geojson */,
 				A94358C61978BCB000A44402 /* BRSMapCoordinateTester.h */,
 				A94358C71978BCB000A44402 /* BRSMapCoordinateTester.m */,
 			);
@@ -171,6 +174,8 @@
 			children = (
 				A983183D1973752700CF1A4A /* BRSAppDelegate.h */,
 				A983183E1973752700CF1A4A /* BRSAppDelegate.m */,
+				A941199A199C98F70024940E /* UIColor+BRSMapColor.h */,
+				A941199B199C98F70024940E /* UIColor+BRSMapColor.m */,
 				A9D0931E1974DEB40000BAF7 /* BRSFlatMapViewController.h */,
 				A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */,
 				A9D093241974ED1D0000BAF7 /* BRSMapMetaDataManager.h */,
@@ -302,8 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98318391973752700CF1A4A /* InfoPlist.strings in Resources */,
+				A9411999199C92C70024940E /* North.geojson in Resources */,
 				A98318441973752700CF1A4A /* Images.xcassets in Resources */,
-				A941198F199BAE210024940E /* testdata_2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +365,7 @@
 				A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */,
 				A9BC685A197514410079BCA3 /* BRSAnnotation.m in Sources */,
 				A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */,
+				A941199C199C98F70024940E /* UIColor+BRSMapColor.m in Sources */,
 				A9411995199BD79D0024940E /* MKPolygon+PointInPolygon.m in Sources */,
 				A983183F1973752700CF1A4A /* BRSAppDelegate.m in Sources */,
 				A983183B1973752700CF1A4A /* main.m in Sources */,

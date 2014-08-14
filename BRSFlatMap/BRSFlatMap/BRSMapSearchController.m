@@ -55,7 +55,6 @@
         else
         {
             if ([self.delegate respondsToSelector:@selector(MapSearchController:DidGetSearchResponse:)]) {
-                NSLog(@"%@", [response mapItems]);
                 [self.delegate MapSearchController:self DidGetSearchResponse:response];
             }
         }

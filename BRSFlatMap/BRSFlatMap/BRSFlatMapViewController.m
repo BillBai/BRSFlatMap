@@ -14,16 +14,25 @@
 #import "BRSMapSearchController.h"
 #import <CCHMapClusterController/CCHMapClusterController.h>
 #import <CCHMapClusterController/CCHMapClusterControllerDelegate.h>
+
 /////////////tester///////////////
 #import "BRSMapCoordinateTester.h"
 /////////////////////////////////
 
+#define MAP_TOOL_BAR_HEIGHT 44.0
 
-@interface BRSFlatMapViewController() <CCHMapClusterControllerDelegate>
+
+@interface BRSFlatMapViewController() <CCHMapClusterControllerDelegate, BRSMapSearchDelegate>
 
 @property (nonatomic, strong) CCHMapClusterController *mapClusterController;
 @property (nonatomic, strong) BRSMapCoordinateTester *coordTester;
 @property (nonatomic, strong) BRSMapSearchController *searchController;
+
+@property (nonatomic, strong) UIToolbar *toolBar;
+
+@property (nonatomic, strong) UISearchDisplayController *searchDisplayContrl;
+@property (nonatomic, strong) UISearchBar *searchBar;
+
 @end
 
 
@@ -32,7 +41,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CGFloat screenHeight = self.view.frame.size.height;
+    CGFloat screenWidth = self.view.frame.size.width;
     
+    
+    /* add the mapView */
     self.mapView = [[BRSSCUTMapView alloc] initWithFrame:self.view.frame Campus:SCUTCampusNorth];
     self.mapView.delegate = self;
     self.mapView.gestureDelegate = self;
@@ -40,19 +53,46 @@
     
     [self.view addSubview:self.mapView];
     
-    //self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
-    //[self.coordTester addAllPolygonsAndAnnotationsToMap];
+    /* add the tool bar */
+    self.toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0,
+                                                               screenHeight - MAP_TOOL_BAR_HEIGHT,
+                                                               screenWidth,
+                                                               MAP_TOOL_BAR_HEIGHT)];
+    [self.view addSubview:self.toolBar];
+    
+    /* search display controller */
+    self.searchBar = [[UISearchBar alloc] init];
+    self.searchDisplayContrl = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    self.searchDisplayContrl.displaysSearchBarInNavigationBar = YES;
+    self.searchDisplayContrl.delegate = self;
+    self.searchDisplayContrl.searchResultsDataSource = self;
+    self.searchDisplayContrl.searchResultsDelegate = self;
+    
+    
+    
+//    self.coordTester = [[BRSMapCoordinateTester alloc] initWithMapView:self.mapView];
+//    [self.coordTester addAllPolygonsAndAnnotationsToMap];
     
 //    self.mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
 //    self.mapClusterController.delegate = self;
 //    [self.mapClusterController addAnnotations:[self.coordTester centerAnnotations] withCompletionHandler:NULL];
     
 //    self.searchController = [[BRSMapSearchController alloc] init];
+//    self.searchController.delegate = self;
 //    CLLocationCoordinate2D userLocation = CLLocationCoordinate2DMake(23.15651951321689, 113.34891394936777);
 //    [BRSUtilities BRSCoordiinateLog:userLocation];
-//    [self.searchController startSearch:@"华南理工" forLocation:userLocation];
-    //NSLog(@"%@", self.searchController.resultPlaces);
+//    [self.searchController startSearch:@"猪脚饭" forLocation:userLocation];
 }
+
+- (void)viewWillLayoutSubviews
+{
+    CGFloat screenHeight = self.view.frame.size.height;
+    CGFloat screenWidth = self.view.frame.size.width;
+    
+    self.mapView.frame = self.view.frame;
+    self.toolBar.frame =CGRectMake(0.0, screenHeight - MAP_TOOL_BAR_HEIGHT, screenWidth, MAP_TOOL_BAR_HEIGHT);
+}
+
 
 #pragma mark - CCHMapClusterControlerDelegate
 
@@ -111,7 +151,7 @@
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    NSLog(@"now zoom level---> %f", [self getZoomLevel]);
+    //NSLog(@"now zoom level---> %f", [self getZoomLevel]);
 }
 
 #pragma mark - BRSMapViewDelegate
@@ -148,18 +188,44 @@
     //[self.mapView removeAnnotations:[self.mapView annotations]];
 }
 
+#pragma mark - BRSMapSearchDelegate
+
+-(void)MapSearchController:(BRSMapSearchController *)mapSearchController DidGetSearchResponse:(MKLocalSearchResponse *)response
+{
+    NSLog(@"%@", [response mapItems]);
+}
+
 
 #pragma mark - Map Utlities
 
 - (BRSPlace *)placeForCoordinate:(CLLocationCoordinate2D)coord
 {
-    for (BRSPlace *place in [BRSMapMetaDataManager sharedDataManager].flatMapMetaData) {
+    BRSMapMetaDataManager *manager = [BRSMapMetaDataManager sharedDataManager];
+    
+    BRSPlace *resultPlace = nil;
+    for (BRSPlace *place in manager.flatMapMetaData) {
         if ([place.boundaryPolygon coordInPolygon:coord]) {
-            return place;
+            resultPlace = place;
+            break;
         }
     }
     
-    return nil;
+    if (!resultPlace) {
+        CLLocationCoordinate2D firstCenterCoordinate = ((BRSPlace *)manager.flatMapMetaData[0]).centerCoordinate;
+        CLLocationDistance distance = [BRSUtilities distanceFromCoord1:firstCenterCoordinate toCoord2:coord];
+        NSUInteger placeIndex = 0;
+        for (NSUInteger i = 0; i < manager.flatMapMetaData.count; i++) {
+            BRSPlace *place = manager.flatMapMetaData[i];
+            CLLocationDistance currentDistance = [BRSUtilities distanceFromCoord1:place.centerCoordinate toCoord2:coord];
+            if (currentDistance < distance) {
+                distance = currentDistance;
+                placeIndex = i;
+            }
+        }
+        resultPlace = manager.flatMapMetaData[placeIndex];
+    }
+    
+    return resultPlace;
 }
 
 #define MERCATOR_OFFSET 268435456

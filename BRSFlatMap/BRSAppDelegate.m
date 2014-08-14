@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 
+#import "UIColor+BRSMapColor.h"
+
 #import "BRSAppDelegate.h"
 #import "BRSFlatMapViewController.h"
 #import "BRSMapMetaDataManager.h"
@@ -21,10 +23,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    
     BRSFlatMapViewController *mapViewControlelr = [[BRSFlatMapViewController alloc] init];
-    [BRSMapMetaDataManager sharedDataManager];
-    self.window.rootViewController = mapViewControlelr;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mapViewControlelr];
+    
+    [[UIView appearance] setTintColor:[UIColor AppGlobalTintColor]];
+    [BRSMapMetaDataManager sharedDataManager]; // init map data.
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
