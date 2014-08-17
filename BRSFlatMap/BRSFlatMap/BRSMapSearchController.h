@@ -6,11 +6,10 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 @import MapKit;
+@protocol BRSMapSearchDelegate;
 #import <Foundation/Foundation.h>
 
-@protocol BRSMapSearchDelegate;
-
-@interface BRSMapSearchController : NSObject
+@interface BRSMapSearchController : NSObject <UISearchDisplayDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *resultPlaces;
 @property (nonatomic, weak) id<BRSMapSearchDelegate> delegate;
@@ -18,7 +17,6 @@
 - (void)startSearch:(NSString *)searchString forLocation:(CLLocationCoordinate2D)location;
 
 @end
-
 
 
 @protocol BRSMapSearchDelegate <NSObject>

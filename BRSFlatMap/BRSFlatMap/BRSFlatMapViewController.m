@@ -62,11 +62,13 @@
     
     /* search display controller */
     self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar.delegate = self.searchController;
+    
     self.searchDisplayContrl = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    self.searchDisplayContrl.delegate = self.searchController;
+    self.searchDisplayContrl.searchResultsDataSource = self.searchController;
+    self.searchDisplayContrl.searchResultsDelegate = self.searchController;
     self.searchDisplayContrl.displaysSearchBarInNavigationBar = YES;
-    self.searchDisplayContrl.delegate = self;
-    self.searchDisplayContrl.searchResultsDataSource = self;
-    self.searchDisplayContrl.searchResultsDelegate = self;
     
     
     

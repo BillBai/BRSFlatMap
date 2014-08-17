@@ -16,6 +16,7 @@
 
 @implementation BRSMapSearchController
 
+#pragma mark - Search Method
 - (void)startSearch:(NSString *)searchString forLocation:(CLLocationCoordinate2D)location
 {
     if (self.localSearch.searching)
@@ -69,5 +70,7 @@
     [self.localSearch startWithCompletionHandler:completionHandler];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
+
+
 
 @end
