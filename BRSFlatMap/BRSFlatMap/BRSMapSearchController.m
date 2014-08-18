@@ -7,6 +7,7 @@
 //
 
 #import "BRSMapSearchController.h"
+#import "BRSMapMetaDataManager.h"
 
 @interface BRSMapSearchController()
 
@@ -15,6 +16,14 @@
 @end
 
 @implementation BRSMapSearchController
+
+- (NSMutableArray *)resultPlaces
+{
+    if (!_resultPlaces) {
+        _resultPlaces = [NSMutableArray array];
+    }
+    return _resultPlaces;
+}
 
 #pragma mark - Search Method
 - (void)startSearch:(NSString *)searchString forLocation:(CLLocationCoordinate2D)location
@@ -70,6 +79,27 @@
     [self.localSearch startWithCompletionHandler:completionHandler];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
+
+- (void)searchLocal:(NSString *)searchString
+{
+    
+}
+
+- (void)updateSearchResultForKeyword:(NSString *) keyword
+{
+    [self.resultPlaces removeAllObjects];
+    NSArray *places = [BRSMapMetaDataManager sharedDataManager].flatMapMetaData;
+    for (BRSPlace *place in places) {
+        NSRange range = [place.title rangeOfString:keyword options:NSCaseInsensitiveSearch];
+        
+        if (range.location != NSNotFound) {
+            NSLog(@"find");
+            [self.resultPlaces addObject:place];
+        }
+    }
+}
+
+
 
 
 

@@ -11,11 +11,11 @@
 
 @interface BRSMapSearchController : NSObject <UISearchDisplayDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
-@property (nonatomic, strong) NSArray *resultPlaces;
+@property (nonatomic, strong) NSMutableArray *resultPlaces;
 @property (nonatomic, weak) id<BRSMapSearchDelegate> delegate;
 
 - (void)startSearch:(NSString *)searchString forLocation:(CLLocationCoordinate2D)location;
-
+- (void)updateSearchResultForKeyword:(NSString *) keyword;
 @end
 
 

@@ -61,13 +61,17 @@
     [self.view addSubview:self.toolBar];
     
     /* search display controller */
+    
+    self.searchController = [[BRSMapSearchController alloc] init];
+    
     self.searchBar = [[UISearchBar alloc] init];
-    self.searchBar.delegate = self.searchController;
+    //self.searchBar.delegate = self;
+    self.searchBar.showsCancelButton = NO;
     
     self.searchDisplayContrl = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
-    self.searchDisplayContrl.delegate = self.searchController;
-    self.searchDisplayContrl.searchResultsDataSource = self.searchController;
-    self.searchDisplayContrl.searchResultsDelegate = self.searchController;
+    self.searchDisplayContrl.delegate = self;
+    self.searchDisplayContrl.searchResultsDataSource = self;
+    self.searchDisplayContrl.searchResultsDelegate = self;
     self.searchDisplayContrl.displaysSearchBarInNavigationBar = YES;
     
     
@@ -173,15 +177,10 @@
     
     BRSPlace *place = [self placeForCoordinate:coord];
     if (place) {
-        annotation.title = place.title;
-        annotation.subtitle = place.subtitle;
+        [self addAnnotationForPlace:place];
     } else {
-        annotation.title = @"hello";
-        annotation.subtitle = @"map";
     }
     
-    [self.mapView addAnnotation:annotation];
-    [self.mapView selectAnnotation:annotation animated:YES];
 }
 
 - (void)mapView:(BRSSCUTMapView *)mapView didSingleTapOnPoint:(CLLocationCoordinate2D)coord
@@ -189,6 +188,8 @@
     NSLog(@"did single tap");
     //[self.mapView removeAnnotations:[self.mapView annotations]];
 }
+
+
 
 #pragma mark - BRSMapSearchDelegate
 
@@ -198,7 +199,62 @@
 }
 
 
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self addAnnotationForPlace:(BRSPlace *)([self.searchController.resultPlaces objectAtIndex:indexPath.row])];
+    [self.searchDisplayContrl setActive:NO];
+}
+
+
+
+#pragma mark - UITAbleViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.searchController.resultPlaces count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"BRSSearchResultCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.textLabel.text = ((BRSPlace *)self.searchController.resultPlaces[indexPath.row]).title;
+    cell.detailTextLabel.text = @"233";
+    return cell;
+}
+
+
+#pragma mark - UISearchDisplayControllerDelegate
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self.searchController updateSearchResultForKeyword:searchString];
+    return YES;
+}
+
+
 #pragma mark - Map Utlities
+
+- (void)addAnnotationForPlace:(BRSPlace *)place
+{
+    BRSAnnotation *annotation = [[BRSAnnotation alloc] init];
+    annotation.title = place.title;
+    annotation.subtitle = place.subtitle;
+    [self.mapView addAnnotation:annotation];
+    [self.mapView selectAnnotation:annotation animated:YES];
+
+}
 
 - (BRSPlace *)placeForCoordinate:(CLLocationCoordinate2D)coord
 {
