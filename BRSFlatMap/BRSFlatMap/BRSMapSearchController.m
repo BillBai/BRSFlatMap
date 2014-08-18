@@ -93,7 +93,7 @@
         NSRange range = [place.title rangeOfString:keyword options:NSCaseInsensitiveSearch];
         
         if (range.location != NSNotFound) {
-            NSLog(@"find");
+            //NSLog(@"find");
             [self.resultPlaces addObject:place];
         }
     }

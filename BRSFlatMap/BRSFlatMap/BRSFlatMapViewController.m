@@ -65,7 +65,7 @@
     self.searchController = [[BRSMapSearchController alloc] init];
     
     self.searchBar = [[UISearchBar alloc] init];
-    //self.searchBar.delegate = self;
+    self.searchBar.delegate = self;
     self.searchBar.showsCancelButton = NO;
     
     self.searchDisplayContrl = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
@@ -243,6 +243,25 @@
     return YES;
 }
 
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    return YES;
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    NSLog(@"wii begin");
+    //NSLog(@"%@", controller.searchBar.delegate);
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    [self.searchDisplayContrl setActive:YES animated:YES];
+    return YES;
+}
+
 
 #pragma mark - Map Utlities
 
@@ -251,6 +270,7 @@
     BRSAnnotation *annotation = [[BRSAnnotation alloc] init];
     annotation.title = place.title;
     annotation.subtitle = place.subtitle;
+    annotation.coordinate = place.centerCoordinate;
     [self.mapView addAnnotation:annotation];
     [self.mapView selectAnnotation:annotation animated:YES];
 
