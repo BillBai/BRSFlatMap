@@ -6,21 +6,21 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 @import MapKit;
-@protocol BRSMapSearchDelegate;
+@protocol BRSMapSearchHelperDelegate;
 #import <Foundation/Foundation.h>
 
-@interface BRSMapSearchController : NSObject <UISearchDisplayDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+@interface BRSMapSearchHelper : NSObject
 
 @property (nonatomic, strong) NSMutableArray *resultPlaces;
-@property (nonatomic, weak) id<BRSMapSearchDelegate> delegate;
+@property (nonatomic, weak) id<BRSMapSearchHelperDelegate> delegate;
 
 - (void)startSearch:(NSString *)searchString forLocation:(CLLocationCoordinate2D)location;
 - (void)updateSearchResultForKeyword:(NSString *) keyword;
 @end
 
 
-@protocol BRSMapSearchDelegate <NSObject>
+@protocol BRSMapSearchHelperDelegate <NSObject>
 
-- (void)MapSearchController:(BRSMapSearchController *) mapSearchController DidGetSearchResponse:(MKLocalSearchResponse *) response;
+- (void)MapSearchController:(BRSMapSearchHelper *) mapSearchHelper DidGetSearchResponse:(MKLocalSearchResponse *) response;
 
 @end

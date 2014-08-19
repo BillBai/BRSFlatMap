@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 #import "MKPolygon+PointInPolygon.h"
+#import "NSArray+BRSMostNearestElements.h"
 
 #import "BRSPlace.h"
 #import "BRSUtilities.h"
 #import "BRSFlatMapViewController.h"
 #import "BRSAnnotation.h"
-#import "BRSMapSearchController.h"
+#import "BRSMapSearchHelper.h"
 #import <CCHMapClusterController/CCHMapClusterController.h>
 #import <CCHMapClusterController/CCHMapClusterControllerDelegate.h>
 
@@ -22,16 +23,22 @@
 #define MAP_TOOL_BAR_HEIGHT 44.0
 
 
-@interface BRSFlatMapViewController() <CCHMapClusterControllerDelegate, BRSMapSearchDelegate>
+@interface BRSFlatMapViewController() <CCHMapClusterControllerDelegate, BRSMapSearchHelperDelegate>
 
+/* Annotation Cluster*/
 @property (nonatomic, strong) CCHMapClusterController *mapClusterController;
 @property (nonatomic, strong) BRSMapCoordinateTester *coordTester;
-@property (nonatomic, strong) BRSMapSearchController *searchController;
 
+/* Tool Bar*/
 @property (nonatomic, strong) UIToolbar *toolBar;
 
+/* search and display */
 @property (nonatomic, strong) UISearchDisplayController *searchDisplayContrl;
 @property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) BRSMapSearchHelper *searchHelper;
+
+/* Map Property */
+@property (nonatomic, strong) BRSAnnotation *currentPinAnnotation;
 
 @end
 
@@ -62,7 +69,7 @@
     
     /* search display controller */
     
-    self.searchController = [[BRSMapSearchController alloc] init];
+    self.searchHelper = [[BRSMapSearchHelper alloc] init];
     
     self.searchBar = [[UISearchBar alloc] init];
     self.searchBar.delegate = self;
@@ -176,16 +183,25 @@
     annotation.coordinate = coord;
     
     BRSPlace *place = [self placeForCoordinate:coord];
-    if (place) {
-        [self addAnnotationForPlace:place];
-    } else {
+    if (place) {    // found a place
+        annotation.title = place.title;
+        annotation.subtitle = place.subtitle;
+        self.currentPinAnnotation = annotation;
+        [self showCurrentPinAnnotation];
+    } else {        // if no corresponding place was found, search the surrounding places
+        NSArray *resultPlaces = [self surrondingPlacesForCoordinate:coord Count:3];
+        for (BRSPlace *place in resultPlaces) {
+            BRSAnnotation *annotation = [self AnnotationForPlace:place];
+            [self.mapView addAnnotation:annotation];
+            [self.mapView selectAnnotation:annotation animated:NO];
+        }
     }
-    
 }
 
 - (void)mapView:(BRSSCUTMapView *)mapView didSingleTapOnPoint:(CLLocationCoordinate2D)coord
 {
     NSLog(@"did single tap");
+    [self clearNormalAnnotations];
     //[self.mapView removeAnnotations:[self.mapView annotations]];
 }
 
@@ -193,7 +209,7 @@
 
 #pragma mark - BRSMapSearchDelegate
 
--(void)MapSearchController:(BRSMapSearchController *)mapSearchController DidGetSearchResponse:(MKLocalSearchResponse *)response
+-(void)MapSearchController:(BRSMapSearchHelper *)mapSearchController DidGetSearchResponse:(MKLocalSearchResponse *)response
 {
     NSLog(@"%@", [response mapItems]);
 }
@@ -203,7 +219,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self addAnnotationForPlace:(BRSPlace *)([self.searchController.resultPlaces objectAtIndex:indexPath.row])];
+    [self clearNormalAnnotations];
+    BRSPlace *place = (BRSPlace *)self.searchHelper.resultPlaces[indexPath.row];
+    [self.mapView addAnnotation:[self AnnotationForPlace:place]];
     [self.searchDisplayContrl setActive:NO];
 }
 
@@ -212,7 +230,7 @@
 #pragma mark - UITAbleViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.searchController.resultPlaces count];
+    return [self.searchHelper.resultPlaces count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -228,7 +246,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = ((BRSPlace *)self.searchController.resultPlaces[indexPath.row]).title;
+    cell.textLabel.text = ((BRSPlace *)self.searchHelper.resultPlaces[indexPath.row]).title;
     cell.detailTextLabel.text = @"233";
     return cell;
 }
@@ -239,7 +257,7 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    [self.searchController updateSearchResultForKeyword:searchString];
+    [self.searchHelper updateSearchResultForKeyword:searchString];
     return YES;
 }
 
@@ -265,45 +283,72 @@
 
 #pragma mark - Map Utlities
 
-- (void)addAnnotationForPlace:(BRSPlace *)place
+- (BRSAnnotation *)AnnotationForPlace:(BRSPlace *)place
 {
     BRSAnnotation *annotation = [[BRSAnnotation alloc] init];
     annotation.title = place.title;
     annotation.subtitle = place.subtitle;
     annotation.coordinate = place.centerCoordinate;
-    [self.mapView addAnnotation:annotation];
-    [self.mapView selectAnnotation:annotation animated:YES];
+    return annotation;
+}
 
+- (void)showCurrentPinAnnotation
+{
+    [self clearNormalAnnotations];
+    [self.mapView addAnnotation:self.currentPinAnnotation];
+    [self.mapView selectAnnotation:self.currentPinAnnotation animated:YES];
+}
+
+- (void)clearNormalAnnotations
+{
+    NSArray *annotations = self.mapView.annotations;
+    for (id<MKAnnotation> annotation in annotations) {
+        if ([annotation isKindOfClass:[MKUserLocation class]]) {
+            continue;
+        }
+        [self.mapView removeAnnotation:annotation];
+    }
 }
 
 - (BRSPlace *)placeForCoordinate:(CLLocationCoordinate2D)coord
 {
     BRSMapMetaDataManager *manager = [BRSMapMetaDataManager sharedDataManager];
     
-    BRSPlace *resultPlace = nil;
     for (BRSPlace *place in manager.flatMapMetaData) {
         if ([place.boundaryPolygon coordInPolygon:coord]) {
-            resultPlace = place;
-            break;
+            return place;
         }
     }
+
+    return nil; // not found
+}
+
+- (NSArray *)surrondingPlacesForCoordinate:(CLLocationCoordinate2D)coord Count:(NSUInteger)count
+{
     
-    if (!resultPlace) {
-        CLLocationCoordinate2D firstCenterCoordinate = ((BRSPlace *)manager.flatMapMetaData[0]).centerCoordinate;
-        CLLocationDistance distance = [BRSUtilities distanceFromCoord1:firstCenterCoordinate toCoord2:coord];
-        NSUInteger placeIndex = 0;
-        for (NSUInteger i = 0; i < manager.flatMapMetaData.count; i++) {
-            BRSPlace *place = manager.flatMapMetaData[i];
-            CLLocationDistance currentDistance = [BRSUtilities distanceFromCoord1:place.centerCoordinate toCoord2:coord];
-            if (currentDistance < distance) {
-                distance = currentDistance;
-                placeIndex = i;
-            }
-        }
-        resultPlace = manager.flatMapMetaData[placeIndex];
-    }
+//    /* initailize the result array*/
+//    NSMutableArray *surroundingPlaces = [NSMutableArray arrayWithCapacity:count];
+//    for (NSUInteger i = 0; i < count; i++) {
+//        [surroundingPlaces addObject:(BRSPlace *)manager.flatMapMetaData[0]];
+//    }
+//    
+//    for (BRSPlace *place in manager.flatMapMetaData) {
+//        for (BRSPlace *resultPlace in surroundingPlaces) {
+//            CLLocationDistance currentDistance = [BRSUtilities distanceFromCoord1:place.centerCoordinate toCoord2:coord];
+//            CLLocationDistance resultDistance = [BRSUtilities distanceFromCoord1:resultPlace.centerCoordinate toCoord2:coord];
+//            if (currentDistance < resultDistance) {
+//                NSUInteger replaceIndex = [surroundingPlaces indexOfObject:resultPlace];
+//                [surroundingPlaces replaceObjectAtIndex:replaceIndex withObject:place];
+//            }
+//        }
+//    }
+    BRSMapMetaDataManager *manager = [BRSMapMetaDataManager sharedDataManager];
     
-    return resultPlace;
+    return [manager.flatMapMetaData most:count NearstElements:^ NSComparisonResult (BRSPlace *currentPlace, BRSPlace *resultPlace){
+        CLLocationDistance currentDistance = [BRSUtilities distanceFromCoord1:currentPlace.centerCoordinate toCoord2:coord];
+        CLLocationDistance resultDistance = [BRSUtilities distanceFromCoord1:resultPlace.centerCoordinate toCoord2:coord];
+        return currentDistance < resultDistance ? NSOrderedAscending : NSOrderedDescending;
+    }];
 }
 
 #define MERCATOR_OFFSET 268435456

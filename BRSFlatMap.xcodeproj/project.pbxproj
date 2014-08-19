@@ -28,11 +28,12 @@
 		A983184E1973752700CF1A4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98318321973752700CF1A4A /* CoreData.framework */; };
 		A98318561973752800CF1A4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98318541973752700CF1A4A /* InfoPlist.strings */; };
 		A98318581973752800CF1A4A /* BRSFlatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A98318571973752800CF1A4A /* BRSFlatMapTests.m */; };
-		A9A3669F197C13FC000F9EDB /* BRSMapSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A3669E197C13FC000F9EDB /* BRSMapSearchController.m */; };
+		A9A3669F197C13FC000F9EDB /* BRSMapSearchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A3669E197C13FC000F9EDB /* BRSMapSearchHelper.m */; };
 		A9BC685A197514410079BCA3 /* BRSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BC6859197514410079BCA3 /* BRSAnnotation.m */; };
 		A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */; };
 		A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */; };
 		A9D093261974ED1D0000BAF7 /* BRSMapMetaDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */; };
+		A9F1253A19A2DB8F0094EBF1 /* NSArray+BRSMostNearestElements.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F1253919A2DB8F0094EBF1 /* NSArray+BRSMostNearestElements.m */; };
 		BEE282826C114BCAA1344129 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C56A2D5733A74C14A1338DC1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +77,8 @@
 		A98318531973752700CF1A4A /* BRSFlatMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BRSFlatMapTests-Info.plist"; sourceTree = "<group>"; };
 		A98318551973752700CF1A4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A98318571973752800CF1A4A /* BRSFlatMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRSFlatMapTests.m; sourceTree = "<group>"; };
-		A9A3669D197C13FC000F9EDB /* BRSMapSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapSearchController.h; path = BRSFlatMap/BRSMapSearchController.h; sourceTree = "<group>"; };
-		A9A3669E197C13FC000F9EDB /* BRSMapSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapSearchController.m; path = BRSFlatMap/BRSMapSearchController.m; sourceTree = "<group>"; };
+		A9A3669D197C13FC000F9EDB /* BRSMapSearchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapSearchHelper.h; path = BRSFlatMap/BRSMapSearchHelper.h; sourceTree = "<group>"; };
+		A9A3669E197C13FC000F9EDB /* BRSMapSearchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapSearchHelper.m; path = BRSFlatMap/BRSMapSearchHelper.m; sourceTree = "<group>"; };
 		A9BC6858197514410079BCA3 /* BRSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSAnnotation.h; path = BRSFlatMap/BRSAnnotation.h; sourceTree = "<group>"; };
 		A9BC6859197514410079BCA3 /* BRSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSAnnotation.m; path = BRSFlatMap/BRSAnnotation.m; sourceTree = "<group>"; };
 		A9D0931E1974DEB40000BAF7 /* BRSFlatMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSFlatMapViewController.h; path = BRSFlatMap/BRSFlatMapViewController.h; sourceTree = "<group>"; };
@@ -86,6 +87,8 @@
 		A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSSCUTMapView.m; path = BRSFlatMap/BRSSCUTMapView.m; sourceTree = "<group>"; };
 		A9D093241974ED1D0000BAF7 /* BRSMapMetaDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRSMapMetaDataManager.h; path = BRSFlatMap/BRSMapMetaDataManager.h; sourceTree = "<group>"; };
 		A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRSMapMetaDataManager.m; path = BRSFlatMap/BRSMapMetaDataManager.m; sourceTree = "<group>"; };
+		A9F1253819A2DB8F0094EBF1 /* NSArray+BRSMostNearestElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+BRSMostNearestElements.h"; path = "BRSFlatMap/NSArray+BRSMostNearestElements.h"; sourceTree = "<group>"; };
+		A9F1253919A2DB8F0094EBF1 /* NSArray+BRSMostNearestElements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+BRSMostNearestElements.m"; path = "BRSFlatMap/NSArray+BRSMostNearestElements.m"; sourceTree = "<group>"; };
 		C56A2D5733A74C14A1338DC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0E00F8AD77460ABD6C0158 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,12 +181,14 @@
 				A941199B199C98F70024940E /* UIColor+BRSMapColor.m */,
 				A9D0931E1974DEB40000BAF7 /* BRSFlatMapViewController.h */,
 				A9D0931F1974DEB40000BAF7 /* BRSFlatMapViewController.m */,
+				A9F1253819A2DB8F0094EBF1 /* NSArray+BRSMostNearestElements.h */,
+				A9F1253919A2DB8F0094EBF1 /* NSArray+BRSMostNearestElements.m */,
 				A9D093241974ED1D0000BAF7 /* BRSMapMetaDataManager.h */,
 				A9D093251974ED1D0000BAF7 /* BRSMapMetaDataManager.m */,
 				A9D093211974E0D50000BAF7 /* BRSSCUTMapView.h */,
 				A9D093221974E0D50000BAF7 /* BRSSCUTMapView.m */,
-				A9A3669D197C13FC000F9EDB /* BRSMapSearchController.h */,
-				A9A3669E197C13FC000F9EDB /* BRSMapSearchController.m */,
+				A9A3669D197C13FC000F9EDB /* BRSMapSearchHelper.h */,
+				A9A3669E197C13FC000F9EDB /* BRSMapSearchHelper.m */,
 				A9BC6858197514410079BCA3 /* BRSAnnotation.h */,
 				A9BC6859197514410079BCA3 /* BRSAnnotation.m */,
 				A9411990199BC9660024940E /* BRSPlace.h */,
@@ -360,12 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9A3669F197C13FC000F9EDB /* BRSMapSearchController.m in Sources */,
+				A9A3669F197C13FC000F9EDB /* BRSMapSearchHelper.m in Sources */,
 				A94358CC1978C07C00A44402 /* BRSUtilities.m in Sources */,
 				A9D093201974DEB40000BAF7 /* BRSFlatMapViewController.m in Sources */,
 				A9BC685A197514410079BCA3 /* BRSAnnotation.m in Sources */,
 				A9D093231974E0D50000BAF7 /* BRSSCUTMapView.m in Sources */,
 				A941199C199C98F70024940E /* UIColor+BRSMapColor.m in Sources */,
+				A9F1253A19A2DB8F0094EBF1 /* NSArray+BRSMostNearestElements.m in Sources */,
 				A9411995199BD79D0024940E /* MKPolygon+PointInPolygon.m in Sources */,
 				A983183F1973752700CF1A4A /* BRSAppDelegate.m in Sources */,
 				A983183B1973752700CF1A4A /* main.m in Sources */,

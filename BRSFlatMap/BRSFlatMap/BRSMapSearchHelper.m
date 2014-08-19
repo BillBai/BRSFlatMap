@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Bill Bai. All rights reserved.
 //
 
-#import "BRSMapSearchController.h"
+#import "BRSMapSearchHelper.h"
 #import "BRSMapMetaDataManager.h"
 
-@interface BRSMapSearchController()
+@interface BRSMapSearchHelper()
 
 @property (nonatomic, strong) MKLocalSearch *localSearch;
 
 @end
 
-@implementation BRSMapSearchController
+@implementation BRSMapSearchHelper
 
 - (NSMutableArray *)resultPlaces
 {
